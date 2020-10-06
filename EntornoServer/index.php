@@ -13,10 +13,11 @@
 <body>
 <h1>Hola soy Sergio y estoy en segundo de DAW2 B)</h1>
 <?php
-
-$variable = 'hola ' . 'soy '. 'sergio';
-
-echo "<h1>" . $variable . "</h1>";
+$a = "sergio";
+$b = 2;
+$c = true;
+$d = 'hola';
+echo $a, $b, $c, $d 
 ?>
 </body>
 </html>

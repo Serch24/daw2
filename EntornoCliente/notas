@@ -4,4 +4,9 @@ hay que hacer un cuaderno con indice de los codigos que hagamos B(
 una hoja para la portada, otra hoja para el indice
 
 cuaderno de practicas: 1 ejercicio cualquiera y otro con un if(
-hacer un programa que nos pida la edad y nos muestre con alert si es mayor si la edad introducidad es mayor de 18 y menor si es menos de 18). 
+hacer un programa que nos pida la edad y nos muestre con alert si es mayor si la edad introducidad es mayor de 18 y menor si es menos de 18).
+
+********************************************
+Tarea: proprama que pida numero de opción que será un numero entre 1 a 5, si se introduce un 1 se mostrá el literal 1, asi sucesivamente hasta 5 con switch case.
+*************************************************
+Ya la hice la de arriba D: 
