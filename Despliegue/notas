@@ -20,3 +20,30 @@ Servidores de aplicaciones
 *BD: Mysql/Oracle
 ---------Segundo trimestre-----------------------------
 ---------------------------------------------------------------------
+
+******************************************************************************
+vimos algo de direcciones ip.
+******************************************************************************
+FTP:
+Servidor remorto ofrece servicios
+LOs clientes piden servicios
+Servidor los atiende
+
+Cuando el cliente quiere un servicio del servidor le envia una petición
+El servidor responde OK
+Comienza una negociación de como se  producirá esa conexión (Cifrado, los puertos, modo de conexión,..etc):Protoloco
+Cada servicio tiene asociado unos puertos por defecto por defecto(HTTP, DNS,FTP,SSH,MAIL)
+El cliente se conecta al puerto por defecto del servidor
+
+HTTP: 80 (Inseguro)
+HTTPS: 443(Seguro->ssl/tls)
+FTP: 21
+SSH: 22
+SMT: 25
+DNS: 53 UDP
+
+del 0 al 1024 servidores
+del 1024 al 49000 bien conocidos
+del 49000 al 64000 clientes
+*****************************************************
+hay que cambiar el puerto si descargo una app diferente
