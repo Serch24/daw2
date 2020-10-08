@@ -8,16 +8,27 @@
         body{
             background-color: aqua;
         }
+
+        h1{
+            font-size: 20px;
+        }
     </style>
 </head>
 <body>
-<h1>Hola soy Sergio y estoy en segundo de DAW2 B)</h1>
+
 <?php
-$a = "sergio";
-$b = 2;
-$c = true;
-$d = 'hola';
-echo $a, $b, $c, $d 
+$variable = 'Sergio Andres Yaccelga Castillo';
+$variable_Copia = 'Sergio Andres Yaccelga Castillo';
+$variable_Copia2 = &$variable_Copia;
+echo('<h2>' . $variable. '</h2>');
+echo('<h2>' . $variable_Copia. '</h2>');
+
+unset($variable_Copia);
+
+echo('<h1> Con Unset: </h1>');
+echo('<h2>' . $variable. '</h2>');
+echo('<h2>' . $variable_Copia. '</h2>');
+echo('<h2>' . $variable_Copia2. '</h2>'); 
 ?>
 </body>
 </html>
