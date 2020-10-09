@@ -1,0 +1,22 @@
+.todo{
+    margin: auto;
+    margin-top: 200px;
+    width: 600px;
+}
+.hijo, .hijo2, .hijo3{
+    height: 200px;
+    width: 200px;
+    float: left;
+}
+
+.hijo{
+    background-color: rgb(226, 55, 55);
+}
+
+.hijo2{
+    background-color: rgb(64, 197, 64);
+}
+
+.hijo3{
+    background-color: rgb(27, 27, 182);
+}
