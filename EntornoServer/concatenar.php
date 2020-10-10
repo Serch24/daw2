@@ -23,7 +23,6 @@
         echo $texto . "<br>";
         concatenaxReferencia($texto);
 	echo $texto;
-
     ?>
 </body>
 </html>
