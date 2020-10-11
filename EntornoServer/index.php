@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV</title>
+    <title>Pag Sergio</title>
     <style>
         body{
             background-color: aqua;
@@ -23,11 +23,11 @@ $variable_Copia2 = &$variable_Copia;
 echo('<h2>' . $variable. '</h2>');
 echo('<h2>' . $variable_Copia. '</h2>');
 
-unset($variable_Copia);
+//unset($variable_Copia);
 
 echo('<h1> Con Unset: </h1>');
 echo('<h2>' . $variable. '</h2>');
-echo('<h2>' . $variable_Copia. '</h2>');
+echo('<h2>' . $variable_Copia . ',commented'.'</h2>');
 echo('<h2>' . $variable_Copia2. '</h2>'); 
 ?>
 </body>
