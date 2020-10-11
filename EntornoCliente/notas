@@ -11,4 +11,10 @@ Tarea: proprama que pida numero de opción que será un numero entre 1 a 5, si s
 *************************************************
 Ya la hice la de arriba D:
 
-hacer un pro q solicite un numero del que queremos mostrar su tabla de multiplicar. 
+hacer un pro q solicite un numero del que queremos mostrar su tabla de multiplicar.
+
+hacer una clase que tenga metodos y propiedades
+
+clase supermercado
+propiedades empleados, productos
+metodos despachar, contarDinero 
