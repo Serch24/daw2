@@ -1,3 +1,3 @@
 document.title = "a";
-console.log(window.innerHeight);
-console.log(window.innerWidth);
+console.log(`${window.innerHeight} px`);
+console.log(`${window.innerWidth} px`);
