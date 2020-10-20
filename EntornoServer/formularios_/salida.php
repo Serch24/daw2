@@ -30,7 +30,8 @@ $contrasena = $_GET["passwd"];
 $fecha = $_GET["fecha"];
 $gen = $_GET["gen"];
     
-    echo" <table><tr>
+    $tabla=<<<FOO
+     <table><tr>
     <th> Nombre </th>
     <th> Idioma </th>
     <th> Contraseña </th>
@@ -40,7 +41,10 @@ $gen = $_GET["gen"];
     <td>$idioma</td>
     <td>$contrasena</td>
     <td>$fecha</td>
-    <td>$gen</td></tr></table>";
+    <td>$gen</td></tr></table>
+    FOO;
+
+    echo $tabla;
 ?>
 </body>
 </html>
