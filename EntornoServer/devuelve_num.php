@@ -8,3 +8,4 @@
 
         printf("Hexa: "."%'010x" . "<br>" ,$nume);
     }
+    
