@@ -18,7 +18,7 @@
 
             $enterno = 5;
             $real_ = 5.6;
-            $cadena = ":D";
+            $cadena = "miCadena";
             $sin_definir = null;
             $boolean = true;
 
@@ -26,30 +26,30 @@
             $resul_por_entero_decimal = $enterno * $real_;
             $resul_mayor_entero_decimal = $enterno > $real_;
 
-            $resu_mas_entero_cadena = $enterno + $cadena;
-            $resu_por_entero_cadena = $enterno * $cadena;
+            $resul_mas_entero_cadena = $enterno + $cadena;
+            $resul_por_entero_cadena = $enterno * $cadena;
             $resul_mayor_entero_cadena = $enterno > $cadena;
 
-            $resu_mas_entero_booleano = $enterno + $boolean;
-            $resu_por_entero_booleano = $enterno * $boolean;
+            $resul_mas_entero_booleano = $enterno + $boolean;
+            $resul_por_entero_booleano = $enterno * $boolean;
             $resul_mayor_entero_booleano = $enterno > $boolean;
 
-            $resu_mas_entero_null = $enterno + $sin_definir;
-            $resu_por_entero_null = $enterno * $sin_definir;
+            $resul_mas_entero_null = $enterno + $sin_definir;
+            $resul_por_entero_null = $enterno * $sin_definir;
             $resul_mayor_entero_null = $enterno > $sin_definir;
 
 
-            $resu_mas_cadena_booleano = $cadena + $boolean;
-            $resu_por_cadena_booleano = $cadena * $boolean;
+            $resul_mas_cadena_booleano = $cadena + $boolean;
+            $resul_por_cadena_booleano = $cadena * $boolean;
             $resul_mayor_cadena_booleano = $cadena > $boolean;
 
-            $resu_mas_cadena_null = $cadena + $sin_definir;
-            $resu_por_cadena_null = $cadena * $sin_definir;
+            $resul_mas_cadena_null = $cadena + $sin_definir;
+            $resul_por_cadena_null = $cadena * $sin_definir;
             $resul_mayor_cadena_null = $cadena > $sin_definir;
 
-            $resu_mas_booleano_null = $enterno + $sin_definir;
-            $resu_por_booleano_null = $enterno * $sin_definir;
-            $resul_mayor_booleano_null = $enterno > $sin_definir;
+            $resul_mas_booleano_null = $boolean + $sin_definir;
+            $resul_por_booleano_null = $boolean * $sin_definir;
+            $resul_mayor_booleano_null = $boolean > $sin_definir;
 
 
             echo "
@@ -113,9 +113,9 @@
 
                 <tr>
                 <td> booleano=$boolean, null=$sin_definir </td>
-                <td> $resul_mas_cadena_null</td>
-                <td> $resul_por_cadena_null</td>
-                <td> $resul_mayor_cadena_null</td>        
+                <td> $resul_mas_booleano_null</td>
+                <td> $resul_por_booleano_null</td>
+                <td> $resul_mayor_booleano_null</td>        
                 </tr>
 
                 </table>";
