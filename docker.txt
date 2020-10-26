@@ -1,0 +1,1 @@
+sudo docker -p 8080:80 -v rutaDeMiCarpetaPhp:/var/www/index --name=nombrequequiera imagendocker
