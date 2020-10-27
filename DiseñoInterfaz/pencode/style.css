@@ -1,0 +1,29 @@
+body{
+    text-align: center;
+}
+
+#primero{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1280px-Image_created_with_a_mobile_phone.png");
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+}
+
+#segundo{
+    background-image: url("https://i1.wp.com/hotbook.com.mx/wp-content/uploads/2019/04/hotbook-se-revela-la-primera-imagen-de-un-agujero-negro-portada.jpg?w=1024&ssl=1");
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+
+}
+#tercero{
+    background-image: url("https://dam.ngenespanol.com/wp-content/uploads/2019/03/luna-colores-nuevo.png");
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+}
+
+/* #primero > h1,#segundo > h1,#tercero > h1{
+    font-size: 9vw;
+    padding: 10vw 0px;
+} */
