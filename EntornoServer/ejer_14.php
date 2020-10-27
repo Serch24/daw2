@@ -11,10 +11,10 @@
         $msg2 = "hola como estas";
         $msg3 = "hola chao";
         $msg4 = "hola nooo";
+        $opcion = rand(1,4);
+        $k = "msg" . $opcion;
+        echo $$k;
     
-        if (!isset($_GET['saludo'])) {
-            $_GET[]
-        }
     ?>
 </body>
 </html>
