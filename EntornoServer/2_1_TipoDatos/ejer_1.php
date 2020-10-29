@@ -21,6 +21,12 @@
             $cadena = "miCadena";
             $sin_definir = null;
             $boolean = true;
+            if (isset($_GET["contador"])) {
+                $contador=$_GET["contador"];
+            }else{
+                $contador = 0;
+            }
+            $contador++;
 
             $resul_mas_entero_decimal = $enterno + $real_;
             $resul_por_entero_decimal = $enterno * $real_;
@@ -120,6 +126,10 @@
 
                 </table>";
 
+        ?>
+        <?php
+            echo "<a href=\"?contador=$contador\"";
+            echo "<br>Has presionado $contador veces";
         ?>
 </body>
 </html>
