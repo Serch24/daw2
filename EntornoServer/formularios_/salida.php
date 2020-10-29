@@ -30,19 +30,19 @@ $contrasena = $_GET["passwd"];
 $fecha = $_GET["fecha"];
 $gen = $_GET["gen"];
     
-    $tabla=<<<FOO
-     <table><tr>
-    <th> Nombre </th>
-    <th> Idioma </th>
-    <th> Contraseña </th>
-    <th> Fecha </th>
-    <th> Genero </th></tr><tr>
-    <td>$nombre</td>
-    <td>$idioma</td>
-    <td>$contrasena</td>
-    <td>$fecha</td>
-    <td>$gen</td></tr></table>
-    FOO;
+    // $tabla=<<<FOO
+    //  <table><tr>
+    // <th> Nombre </th>
+    // <th> Idioma </th>
+    // <th> Contraseña </th>
+    // <th> Fecha </th>
+    // <th> Genero </th></tr><tr>
+    // <td>$nombre</td>
+    // <td>$idioma</td>
+    // <td>$contrasena</td>
+    // <td>$fecha</td>
+    // <td>$gen</td></tr></table>
+    // FOO;
 
     echo $tabla;
 ?>
