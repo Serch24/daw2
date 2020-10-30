@@ -15,7 +15,7 @@
 <body>
     <!-- combinar los diferentes tipos de datos -->
         <?php
-            error_reporting(0);
+            // error_reporting(0);
             $enterno = 5;
             $real_ = 5.6;
             $cadena = "miCadena";
