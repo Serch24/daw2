@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="Sergio Yaccelga" content="Yaccelga Castillo">
+    <title>vocal</title>
 </head>
 <body>
     <?php
+    /* Crear un programa que recibe por GET una vocal, 
+    y usando un switch nos indique si la vocal es abierta o cerrada, o bien no es una vocal. */
+    error_reporting(0);
     if (isset($_GET["vocal"])) {
         $vocal = $_GET["vocal"];
     }else{
@@ -32,7 +35,7 @@
                 echo "la vocal $vocal es cerrada";
                 break;
         default:
-            echo "No existeee";
+            echo "No existe esa vocal";
             break;
     }
 
