@@ -15,4 +15,4 @@ COPY . .
 
 ```
 
-![alt text](https://lh3.googleusercontent.com/proxy/1zB49MfkfZEw1jHC5U7JW68C1Io0wHgom81QATqvqmyiU6f1L-OnKh2cpN_k_7L2U4tueLpdSiRP95BdI9l9pBmptG3vle7R19yhrMuBg88qTVFz9RFHGb3Fp84s8C9TMMoH "texto random") 
+![miballena UwU](ballena.png) 

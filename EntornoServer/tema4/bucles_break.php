@@ -2,7 +2,8 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="Sergio Andrés" content="Yaccelga Castillo">
+    <meta name="author" content="Sergio Andrés Yaccelga Castillo">
+    <meta name="descriptions" content="bucle de contraseñas">
     <title>Bucles con break</title>
 </head>
 <body>
@@ -19,7 +20,7 @@
                     echo "<h1>No es primo</h1>";
                     break;
                 }else{
-                    echo "<h1>Es prim00</h1>";
+                    echo "<h1>Es prim0</h1>";
                 break;
                 }
                     
@@ -30,23 +31,18 @@
         {
             /* EJ2. Obtener 10 números aleatorios del 1 al 100, 
             pero ignorar los números múltiplos de 7. Uso de continue. */
-            $numeros = [];
             for ($i=0; $i < 10; $i++) { 
                 $tmp = mt_rand(1,100);
                 /* echo "$tmp <br>"; */
                 if($tmp%7==0){
                     continue;
                 }
-                array_push($numeros,$tmp);
-            }
-
-            echo "-------------------------------------<br>";
-            for ($i=0; $i < count($numeros); $i++) { 
-                echo $numeros[$i] . "<br>";
+                echo "<h1>$tmp</h1>";
             }
             
         }
-        // continuee(); primo(45);
+        //continuee(); 
+        //primo(56);
     
     ?>  
 </body>
