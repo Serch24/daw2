@@ -1,0 +1,31 @@
+.body{
+    background-color: #e5eff1;
+    padding: 10px;
+}
+
+
+
+.container::before{
+    content: "";
+    width: 400px;
+    background-color:red;
+    margin: auto;
+    position: relative;
+    padding: 10px; 
+}
+
+
+.container >.main{
+    background-color: rgb(207, 237, 49);
+    height: 500px;
+}
+
+.imagen{
+    background-image: url("elefante.svg");
+    position: relative;
+    top: 50px;
+    width: 0px;
+    margin: auto ;
+    padding: 100px;
+    background-size: cover;
+}
