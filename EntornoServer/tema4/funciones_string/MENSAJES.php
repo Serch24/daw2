@@ -8,9 +8,10 @@
 </head>
 <body>
 <?php
-
 $usuario = $_GET["user"];
 $pass = $_GET["pass"];
+$tmp_usuario = $usuario;
+$tmp_pass = $pass;
 const MIN_CARACTERES = 5;
 if (!empty($usuario) && !empty($pass) ) {
     
@@ -23,24 +24,27 @@ if (!empty($usuario) && !empty($pass) ) {
         <input type="text" name="tema" id="tema"><br><br>
         <label for="comentario">Comentario</label>
         <textarea name="comentario" id="comentario" cols="70" rows="8" maxlength=300></textarea>
+        <input type="hidden" name="usu" id="usu" value=<?php echo "$usuario" ?>>
+        <input type="hidden" name="pass" id="usu" value=<?php echo "$pass" ?>>
         <input type="submit" value="Detalles"><br>
-        <a href="#">Terminar</a>
-        <a href="#">Nueva Opinión</a>
+        <a href=<?php echo "/index.php"?>>Terminar</a>
 
+        <a href=<?php echo "?user=$usuario&pass=$pass"?>>Nueva Opinión</a>
+        
+        
     </form>
         <?php
 
     }else {
-        echo "<h1>Error al escribir el usuario o la contraseña</h1>";
-        ?>
-
-        <a href="index.php">Volver a escribir</a>
+        echo "<h1>Error al escribir el usuario o la contraseña</h1>\n";
         
-        <?php
+        echo "<a href='index.php'>Volver a escribir</a>\n";
+        
     }
 }else{
-    echo "<h1>Hay un campo en blanco, por favor debes escribir algo.<h1>";
+    echo "<h2>Hay un campo en blanco, por favor debes escribir algo.</h2>\n";
+    echo "<a href='index.php'>Volver a escribir</a>\n";
 }
-        ?>
+    ?>
 </body>
 </html>

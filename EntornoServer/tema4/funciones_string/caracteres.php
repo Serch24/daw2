@@ -7,7 +7,10 @@
     <title>Caracteres</title>
 </head>
 <body>
+<h1>Informe sobre el comentario</h1>
 <?php
+    $usu = $_GET['usu'];
+    $pass = $_GET['pass'];
     $tmp = [];
     $caracteres = [];
     $asunto = $_GET['tema'];
@@ -57,6 +60,7 @@
         }
     } 
 
+    echo "<a href='MENSAJES.php?user=$usu&pass=$pass'>Volver</a>";
 ?>
 </body>
 </html>
