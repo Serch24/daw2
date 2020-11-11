@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sergio Andŕes Yaccelga Castillo">
+    <meta name="content" content="mensajes sobre los caracteres">
     <link rel="stylesheet" href="style.css">
     <title>Caracteres</title>
 </head>
@@ -38,12 +40,12 @@
 
     foreach ($caracteres as $key => $value) {
         if (max($caracteres)==$value) {
-            echo "<p>El caracter/(s) que más se repiten son '$key', y se repiten $value veces</p>";
+            echo "<p>El caracter/(s) que más se repiten son ' $key ', y se repiten $value veces</p>";
         }
     }
-    echo chr(240) . chr(159) . chr(144) . chr(152);
-    echo chr(240) . chr(159) . chr(144) . chr(153);
-    echo "&#x1F418";
+    // echo chr(240) . chr(159) . chr(144) . chr(152);
+    // echo chr(240) . chr(159) . chr(144) . chr(150);
+    // echo "&#x1F418";
     
     foreach ($tmp as $key => $value) {
         echo "<p>La palabra '$key' se repite $value veces<p>\n";
@@ -56,7 +58,7 @@
 
      foreach ($tmp as $key => $value) {
         if (max($tmp)==$value) {
-            echo "<p>La palabra más repetida es '$key' y se repite $value veces</p>\n";
+            echo "<p>La palabra más repetida es ' $key ' y se repite $value veces</p>\n";
         }
     } 
 

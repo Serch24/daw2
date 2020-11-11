@@ -1,10 +1,63 @@
-.welcome{
-    text-align: center;
-}
-p{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+body {
+    font-family: 'Poppins', sans-serif; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 1.5rem;
+    background-color:#222222;
+  }
+  
+  .user,.pass,.tem,.com{
+      font-family: inherit;
+      width: 100%;
+      border: 0;
+      border-bottom: 2px solid #9b9b9b;
+      font-size: 1.3rem;
+      color: white;
+      padding: 7px 0;
+      background: transparent;
 }
 
-.user{
-    background-color: black;
+.lab,h1{
+    color: #cfba58;
+}
+
+p{
+    color: #f0efd1;
+}
+
+.sub{
+    color: #f0efd1;
+    background-color: #bf3211;
+    border: 0px;
+    border-radius: 90%;
+    height: 30px;
+    transition: 1s;
+}
+.sub:hover{
+    background: transparent;
+    border-radius: 0;
+    border-bottom: 1px solid #eee;
+}
+a{
+    white-space: nowrap;
+    position: relative;
+    font-weight: 500;
+    text-decoration: none;
+    top: 7px;
+    color: #cfba58;
+    
+}
+
+a::after{
+    content: "";
+    background: linear-gradient(90deg,#ff8a00,#e52e71);
+    height: 2px;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    border-radius: 2px;
+    width: 100%;
 }

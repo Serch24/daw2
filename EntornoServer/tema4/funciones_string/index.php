@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Sergio Andrés Yaccelga Castillo">
@@ -9,15 +9,17 @@
     <title>Login</title>
 </head>
 <body>
+
     <h1>Identificación de usuario</h1>
     <form action="MENSAJES.php" method="get">
     
-        <label for="user">User</label>
-        <input type="text" name="user" id="user" class="user">
-        <label for="pass">password</label>
-        <input type="password" name="pass" id="pass" class="pass">
-        <input type="submit" value="Entrar">
-    
+        <div class="main">
+            <label for="user" class="lab">User: </label>
+            <input type="text" name="user" id="user" class="user">
+            <label for="pass" class="lab">password: </label>
+            <input type="password" name="pass" id="pass" class="pass">
+            <input type="submit" value="Entrar" class="sub">
+        </div>    
     </form>
 </body>
 </html>
