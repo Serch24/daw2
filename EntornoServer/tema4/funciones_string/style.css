@@ -61,3 +61,16 @@ a::after{
     border-radius: 2px;
     width: 100%;
 }
+
+table{
+    border-collapse: collapse;
+}
+td, th {
+    border: 1px solid #999;
+    padding: 0.5rem;
+    text-align: left;
+  }
+
+  /* td{
+      color: #cfba58;
+  } */

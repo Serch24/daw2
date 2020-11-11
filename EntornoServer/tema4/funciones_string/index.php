@@ -9,7 +9,9 @@
     <title>Login</title>
 </head>
 <body>
-
+<!-- Crea un archivo HTML que contenga un formulario con campos para introducir el usuario y la pasword, y un
+botón de envio. Establece el action del formulario al archivo MENSAJES . PHP y configura el método de envio como
+GET . -->
     <h1>Identificación de usuario</h1>
     <form action="MENSAJES.php" method="get">
     

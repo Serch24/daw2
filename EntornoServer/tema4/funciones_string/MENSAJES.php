@@ -9,6 +9,16 @@
     <title>Foro</title>
 </head>
 <body>
+
+<!-- Crea el archivo MENSAJES . PHP que tras comprobar que se ha accedido con usuario y password correctas (
+usuario con 5 o más caracteres y su password el nombre de usuario al revés) muestre un formulario con campos
+para escribir tema de debate (asunto) y la opinión ( área de texto para escribir 300 o más caracteres ) ;
+presentará también los siguientes elementos: -->
+
+<!-- 
+- Enlace con etiqueta Nueva Opinión que vuelva a presentar el formulario en blanco
+- Enlace con etiqueta Terminar que presente el documento HTML de identificación de usuario -->
+
 <?php
     $usuario = $_GET["user"];
     $pass = $_GET["pass"];
@@ -24,13 +34,13 @@
                     <form action="caracteres.php" method="get">
                         <label for="tema" class="lab">Tema: </label>
                         <input type="text" name="tema" id="tema" class="tem"><br><br>
-                        <label for="comentario"class="lab">Comentario: </label>
+                        <label for="comentario" class="lab">Comentario: </label>
                         <textarea name="comentario" id="comentario" cols="70" rows="8" maxlength=300 class="com"></textarea>
                         <input type="hidden" name="usu" id="usu" value=<?php echo "$usuario" ?>>
-                        <input type="hidden" name="pass" id="usu" value=<?php echo "$pass" ?>>
+                        <input type="hidden" name="pass" id="pass" value=<?php echo "$pass" ?>>
                         <input type="submit" value="Detalles" class="sub"><br>
                         <a href=<?php echo "/index.php"?>>Terminar</a>
-                        <a href=<?php echo "?user=$usuario&pass=$pass"?>>Nueva Opinión</a>
+                        <a href=<?php echo "'?user=$usuario&pass=$pass'"?>>Nueva Opinión</a>
                         
                         
                     </form>
@@ -41,7 +51,7 @@
                 echo "<a href='/'>Volver a escribir</a>\n";
             }
         }else{
-            echo "<h2>Hay un campo en blanco, por favor debes escribir algo.</h2>\n";
+            echo "<h1>Hay un campo en blanco, por favor debes escribir algo.</h1>\n";
             echo "<a href='index.php'>Volver a escribir</a>\n";
         }
                 ?>

@@ -1,31 +1,32 @@
-.body{
-    background-color: #e5eff1;
-    padding: 10px;
-}
-
-
-
-.container::before{
-    content: "";
-    width: 400px;
-    background-color:red;
+.contenedor{
+    background-color: greenyellow;
+    width: 300px;
+    height: 300px;
     margin: auto;
-    position: relative;
-    padding: 10px; 
 }
-
-
-.container >.main{
-    background-color: rgb(207, 237, 49);
-    height: 500px;
+.contenedor::before{
+    content: "";
+    background-color: #e5eff1;
+    padding: 100px;
+    display: inline-block;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: -10px;
+    position: absolute;
 }
 
 .imagen{
     background-image: url("elefante.svg");
-    position: relative;
-    top: 50px;
-    width: 0px;
-    margin: auto ;
-    padding: 100px;
     background-size: cover;
+    margin: auto;
+    position: absolute;
+    top: 27px;
+    padding: 75px;
 }
+
+/* .otro::after{
+    content: " ";
+    background-color: black;
+    padding: 50px;
+    margin: auto;
+} */
