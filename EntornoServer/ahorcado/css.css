@@ -1,0 +1,38 @@
+:root{
+    color: white;
+    text-align: center;
+}
+body{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(5,51,84,1) 42%, rgba(40,9,121,1) 81%); 
+}
+.main{
+    margin: 10px 50px;
+    background-color: rgb(58, 29, 58);
+}
+
+.deadmen{
+    background-image: url("todo.png");
+    background-size: cover;
+    width: 340px;
+    height: 340px;
+    margin: auto;
+    position: relative;
+}
+
+.words{
+    background-color: transparent;
+    display: inline-block;
+    width: auto;
+    margin: 100px;
+}
+
+.form{
+    font-size: 1.4em;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    background-color: rgb(114, 70, 114);
+    display: inline-block;
+    height: auto;
+}

@@ -1,0 +1,15 @@
+Nombre = Sergio
+Apellido = Yaccelga
+Edad = 20
+Nombre = Sergio
+Apellido = Yaccelga
+Edad = 20
+Nombre = Sergio
+Apellido = Yaccelga
+Edad = 20
+Nombre = Sergio
+Apellido = Yaccelga
+Edad = 20
+Nombre = Sergio
+Apellido = Yaccelga
+Edad = 20
