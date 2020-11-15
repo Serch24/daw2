@@ -1,5 +1,4 @@
-# Bot en Telegram con Nodejs y npm
-
+# Bot en Telegram con Nodejs
 ## Requisitos: 
 
 * Conocimientos en javascript
