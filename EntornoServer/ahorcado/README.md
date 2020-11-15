@@ -27,3 +27,11 @@ if (!(empty($letra)) && strlen($letra)==CARACTER_MINIMO && (preg_match(PATTERN,$
     shuffle($palabras);
     echo $palabras[0];
 ```
+
+## Necesito de sessions o coockies para hacer el juego, creo... 
+
+
+# TO DO
+
+1. hacer el juego.
+2. fin.

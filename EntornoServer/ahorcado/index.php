@@ -27,6 +27,7 @@
                 shuffle($palabras);
                 $tmp = $palabras[0];
                 echo $tmp;
+                echo $_SERVER['HTTP_USER_AGENT'];
             }
             ?>
         </div>
