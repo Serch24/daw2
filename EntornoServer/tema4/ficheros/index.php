@@ -9,17 +9,15 @@
 </head>
 <body>
     <?php
-        $path = './sergio5.txt';
-        // $texto = ['Nombre'=> 'Sergio','Apellido'=>'Yaccelga','Edad'=>20];
-        $ecr = fopen($path,'r') or die("no se abre");
-        while($a = fgets($ecr)){
-            if(strcasecmp(trim($a),"sergio")==0){
-                echo "<h1>Son iguales</h1>";
-            }
+    error_reporting(E_ALL);
+
+        $path = './sergioq.txt';
+        $texto = ['Nombre'=> 'Sergio','Apellido'=>'Yaccelga','Edad'=>20];
+        $ecr = @fopen($path,'r') or die("no se abre");
+        
+        foreach ($texto as $key => $value) {
+            fwrite($ecr,"$key = $value".PHP_EOL) or die("no se escribe");
         }
-        // foreach ($texto as $key => $value) {
-        //     fwrite($ecr,"$key = $value".PHP_EOL) or die("no se escribe");
-        // }
         
         fclose($ecr);
         echo "Terminado!";

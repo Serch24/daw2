@@ -1,0 +1,3 @@
+Nombre = Sergio
+Apellido = Yaccelga
+Edad = 20
