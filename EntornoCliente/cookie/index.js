@@ -1,15 +1,11 @@
-function leerCookie(la_cookie) {
-    const cookies = "nombre=sergio;apellido=yaccelga;edad=20";
-    if (la_cookie.length==0) {
-        return null;
-    }
-    let spliteado = new RegExp(";",'g')
-    console.log(spliteado)
-    let a = cookies.split(spliteado);
-    console.log(a)
-    // for (let i = 0; i < a.length; i++) {
-    //     console.log(la_cookie[i])
-    // }
-}
+let uno = document.cookie= "numero=1";
+cadena = uno.split("=");
+sumar = parseInt(cadena[1])+1;
+console.log(sumar);
+document.cookie = "numero="+ sumar+"";
+console.log(document.cookie);
+// function ver() {
+//     alert(`Has ingresado ${document.cookie.split("=")[1]} veces`);
+// }
 
-leerCookie("nombre");
+// ver();

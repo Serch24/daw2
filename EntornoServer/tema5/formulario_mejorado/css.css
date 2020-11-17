@@ -10,3 +10,18 @@ form{
     background: rgb(0,212,255);
     background: linear-gradient(90deg, rgba(0,212,255,1) 15%, rgba(9,9,121,1) 60%, rgba(2,0,36,1) 100%); 
 }
+.a{
+    display: block;
+}
+#ingles,#aleman,#frances{
+    display: inline-block;
+}
+
+.error{
+    color: red;
+}
+.win{
+    color: rgb(31, 24, 163);
+    text-align: center;
+    font-size: 6em;
+}
