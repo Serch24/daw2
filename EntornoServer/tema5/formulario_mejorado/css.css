@@ -1,0 +1,12 @@
+body{
+    width:800px;
+    margin:40px auto;
+}
+input {
+    display: block;
+    margin: 10px;
+}
+form{
+    background: rgb(0,212,255);
+    background: linear-gradient(90deg, rgba(0,212,255,1) 15%, rgba(9,9,121,1) 60%, rgba(2,0,36,1) 100%); 
+}
