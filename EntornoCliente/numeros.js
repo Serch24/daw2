@@ -1,5 +1,7 @@
 var base = parseInt(prompt("dame la base"));
 var exponente = parseInt(prompt("dame el exponente"));
+var a = parseInt(prompt("Hola que haces"));
+var b = new Date();
 
 //var total = (uno, dos) => uno * dos;
 //var potencia = (a, b) => b == 0 ? 1 : a * (potencia(a, b - 1));

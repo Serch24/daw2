@@ -6,4 +6,5 @@ document.cookie = "numero="+ sumar+"";
 console.log(document.cookie);
 // function ver() {
 //     alert(`Has ingresado ${document.cookie.split("=")[1]} veces`)
-//   
+// 
+document.documentElement

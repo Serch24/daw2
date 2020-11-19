@@ -3,11 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sergio Andŕes Yaccelga Castillo">
+    <meta name="description" content="Prueba">
+
     <style>
     body{
         width: 600px;
         margin: 20px auto;
         font-size: 2em;
+    }
+    p{
+        background-color: #000;
+        width:300;
+
     }
     </style>
     <title>Document</title>
@@ -21,6 +29,8 @@
             if(!$valido){
                 $errores[] = $_POST['nombre'];
                 echo "error de longitud\n";
+                echo "bobo";
+
             }
         }
         
