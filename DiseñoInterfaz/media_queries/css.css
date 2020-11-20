@@ -1,0 +1,44 @@
+/* Este pen tiene Normalize actvo */
+body {
+    font-family: sans-serif;
+  }
+  
+  nav {
+    background-color: #eee;
+    padding: 10px;
+  }
+  nav ul { /* Deshacer estilo por defecto de todos los ul */
+    padding: 0;
+    margin: 0;
+  }
+  nav li {
+    display: inline-block;
+    position: relative;
+    background-color: #ccc;
+  }
+  nav li:hover {
+    background-color: #aaa;
+  }
+  
+  nav li a {
+    /* El padding/margin de elementos inline sólo influyen en el 
+       padre para la anchura, pero no la altura. 
+       Por eso lo pasamos a block. */
+    display: block;
+    padding: .5em 1em;
+  }
+  nav .dropdown > ul {
+    min-width: 100px;
+    position: absolute;
+    left: 0;
+    display: none; /* Oculto sin hover */
+  }
+  nav .dropdown:hover > ul {
+    display: block; /* Mostrado en hover */
+  }
+  
+  @media(max-width: 600px){
+      nav:before{
+          content: ' ';
+      }
+  }
