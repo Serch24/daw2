@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!---Propiedades relacionadas con las dimensiones
+Probar a unificarla
+Del objeto Navigator probar:appName,appVersion,cpuClass,platform
+Del objeto screen buscar todas
+Intentar abrir una ventana con un ancho y alto que corresponda con la mitad de la pantalla
+Si se el alto y el ancho de mi navegador puedo desplazarlo
+http://host.dominio:puerto/fichero?parámetro1=valor1&parámetro2=valor2
+A los dos segundos cambiarle el href a los dos segundos y ponerle "www.google.es"-->
+    <meta charset="UTF-8">
+    <meta name="author" content="Catalin Mazarache">
+    <title>Window subobjetos</title>
+
+    <script>
+        document.write("Esta es la ventana con la mitad de la pantalla");
+        /*
+        function cerrar_ventana(){
+               setTimeout(function(){
+                   window.close();
+               },2000);
+           }     
+        window.onload=cerrar_ventana();
+        */
+       function cambio_pagina(){
+           alert("Abrir google");
+            setTimeout(location.href="https://www.google.es/",5000);
+       }
+       window.onload=cambio_pagina();
+
+
+       
+               
+    </script>
+</head>
+<body>
+	<script>
+		
+	</script>
+</body>
+</html>

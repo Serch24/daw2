@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!---Propiedades relacionadas con las dimensiones
+Probar a unificarla
+Del objeto Navigator probar:appName,appVersion,cpuClass,platform
+Del objeto screen buscar todas
+Intentar abrir una ventana con un ancho y alto que corresponda con la mitad de la pantalla
+Si se el alto y el ancho de mi navegador puedo desplazarlo
+http://host.dominio:puerto/fichero?parámetro1=valor1&parámetro2=valor2
+A los dos segundos cambiarle el href a los dos segundos y ponerle "www.google.es"-->
+    <meta charset="UTF-8">
+    <meta name="author" content="Catalin Mazarache">
+    <title>Window subobjetos</title>
+
+    <script>
+        /*
+        var variable;
+        for (variable in window.navigator) {
+              document.write(variable + " --> " + window.navigator[variable] + "<br>");
+        }
+        */
+        document.write("Las propiedades del objeto navigator:  <br>");
+        document.write("El nombre del navegador es " + navigator.appName + "<br>");
+        document.write("La versión es " + navigator.appVersion + "<br>");
+        document.write("El tipo de procesador es " + navigator.cpuClass + "<br>");
+        document.write("El tipo de sistema es " + navigator.platform + "<br>");
+        
+
+        document.write("-----------------------------------------" + "<br>");
+        document.write("Las propiedades del objeto screen:" + "<br>");
+        document.write("El ancho total en pixeles es " + screen.width + "<br>");
+        document.write("La altura total en pixeles es " + screen.height + "<br>");
+        document.write("El ancho disponible en pixeles sin contar las barras es " + screen.availWidth + "<br>");
+        document.write("La altura disponible en pixeles sin contar las barras es " + screen.availHeight + "<br>");
+        document.write("La profundidad del color es " + screen.colorDepth + "<br>");
+        
+
+        /*
+        Intentar abrir una ventana con un ancho y alto que corresponda con la mitad de la pantalla
+        Si se el alto y el ancho de mi navegador puedo desplazarlo
+        */
+
+        document.write("Mi ventana tiene un ancho de " + screen.width + " y un alto de " + screen.height);
+
+        function mitad_pantalla(url){
+            window.open(url,"pantalla","width=768,height=432,scrollbars=yes menubar=yes toolbar=yes");
+            
+        }
+        mitad_pantalla("http://127.0.0.1:5500/Pantalla.html");
+
+
+               
+    </script>
+</head>
+<body>
+	<script>
+		
+	</script>
+</body>
+</html>

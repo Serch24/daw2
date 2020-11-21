@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!---Desde la ventana padre abrir una ventana hija,a los tres segundos de cargarse tiene que darle el foco(Usar el open,blur)
+ +3 segundos Cargo hija.html
+ +2 segundos Redimensionar a 400x300 px-
+ +2 segundos Mover al pixel 200x100
+ +2 segundos Cerrar hija.html-->
+    <meta charset="UTF-8">
+    <meta name="author" content="Catalin Mazarache">
+    <title>Window Padre</title>
+
+    <script>
+        function abrir(){
+           
+           hija=window.open("Hija.html","hija","width=1000 height=800 menubar=yes");
+        }
+        function cerrar(){
+            hija.close();
+        }
+        function tamanio(){
+            hija.resizeTo(screen.width/2,screen.height/2);
+        }
+        var hija;
+        setTimeout("abrir()",2000);
+        setTimeout("tamanio()",4000);
+        setTimeout("cerrar()",6000);
+
+               
+    </script>
+</head>
+<body>
+	<script>
+		
+	</script>
+</body>
+</html>
