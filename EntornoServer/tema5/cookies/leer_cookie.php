@@ -8,12 +8,14 @@
 </head>
 <body>
     <?php
-        setcookie("nombre","sergio", time()+50);
+    error_reporting(E_ALL);
+        setcookie("nombre","sergio", null,"/","localhost",true,FALSE);
         if (!empty($_COOKIE['nombre'])) {
             echo "<br>la cookie es : ". $_COOKIE['nombre'];
         }else{
             echo "<br>no existe";
         }
+
     ?>
 </body>
 </html>
