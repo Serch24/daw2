@@ -39,19 +39,22 @@
 }
 
 
-/* @media (max-width:463px) {
+@media (max-width:463px) {
     .icono {
         display: block;
         font-size: 3em;
         position: relative;
     }
-    .listas {
+    /* .listas {
         display: list-item;
         position: fixed;
         background-color: rgb(31, 30, 30);
         top: 80px;
+    } */
+    .listas{
+        display: none;
     }
-} */
+}
 
 @media (prefers-color-scheme: dark) {
     * {

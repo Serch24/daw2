@@ -9,22 +9,12 @@
 <body>
     <?php
     session_start();
-    $_SESSION['nombre']=$_POST['usuario'];
-    $_SESSION['passwd']=$_POST['passwd'];
-    echo"<pre>";
-    echo "Sesion";
-    print_r($_SESSION);
-    echo "coockie";
-    print_r($_COOKIE);
-    echo "request";
-    print_r($_REQUEST);
-    echo"</pre>";
-    
-        if (!empty($_SESSION['nombre'])) {
-            echo "<h1>Hola " . $_SESSION['nombre']."</h1>";
-        }else{
-            echo "algo pasó";
-        }
+    error_reporting(E_ALL);
+    phpinfo();
+    echo "<pre>";
+        print_r($_COOKIE);
+        print_r($_SESSION);
+    echo "</pre>";
     ?>
 </body>
 </html>

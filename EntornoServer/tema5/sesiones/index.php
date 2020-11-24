@@ -18,13 +18,13 @@
 </head>
 <body>
     <?php
+        error_reporting(E_ALL);
     if($_SERVER['REQUEST_METHOD']=='POST'){
         session_start();
         $_SESSION['nombre']= $_POST['usuario'];
         $_SESSION['passwd']= $_POST['passwd'];
         echo "<h1>Bienvenido ". $_SESSION['nombre']."</h1>";
-    }elseif(empty($_COOKIE)&& $_SERVER['REQUEST_METHOD']=='GET'){
-        echo "<h1>Acceso denegado</h1>";
+        header("location:crear_sesion.php");
     }else{
         ?>
             <form action=<?php echo $_SERVER['PHP_SELF'] ?> method="post">
