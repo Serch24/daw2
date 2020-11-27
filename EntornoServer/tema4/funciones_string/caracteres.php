@@ -17,6 +17,7 @@ texto original, el resto sobre los 140 primeros caracteres) y enlace para volver
 
 <h1>Informe sobre el comentario</h1>
     <?php
+    error_reporting(E_ALL);
         $usu = $_GET['usu'];
         $pass = $_GET['pass'];
         $tmp = [];

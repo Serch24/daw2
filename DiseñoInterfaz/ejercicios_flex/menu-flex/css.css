@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+.main{
+    margin: auto;
+}
+.main .contenedor{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor li{
+    background-color: rgb(139, 170, 160);
+}
+
+.uno{
+    flex-grow: 1;
+}
+.dos{
+    flex-grow: 1;
+
+}
+.tres{
+    flex-grow: 1;
+    
+}
+.cuatro{
+    flex-grow: 1;
+    
+}
+
+@media (max-width: 590px){
+    .contenedor{
+        flex-direction: column;
+        justify-content: center;
+    }
+}

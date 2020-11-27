@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    margin: 100px;
+    height: 300px;
+    background-color: rgb(201, 176, 145);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.uno,.dos,.tres{
+    display: flex;
+    width: 100%;
+    height: 80px;
+}
+.uno_uno{
+    background-color: yellow;
+    flex-grow: 1;
+}
+.uno_dos{
+    background-color: blue;
+    flex-grow: 1;
+}
+.uno_tres{
+    background-color: red;
+    flex-grow: 1;
+}
+.dos_uno{
+    background-color: yellow;
+    flex-grow: 1;
+}
+.dos_dos{
+    background-color: blue;
+    flex-grow: 6;
+}
+.dos_tres{
+    background-color: red;
+    flex-grow: 1;
+}
+.tres_uno{
+    background-color: yellow;
+    flex-grow: 1;
+}
+.tres_dos{
+    background-color: blue;
+flex-grow: 2;
+}
+.tres_tres{
+    background-color: red;
+    flex-grow: 1;
+}

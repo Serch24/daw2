@@ -20,6 +20,7 @@ presentará también los siguientes elementos: -->
 - Enlace con etiqueta Terminar que presente el documento HTML de identificación de usuario -->
 
 <?php
+    error_reporting(E_ALL);
     $usuario = $_GET["user"];
     $pass = $_GET["pass"];
     $tmp_usuario = $usuario;
