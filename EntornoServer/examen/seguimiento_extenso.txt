@@ -1,0 +1,75 @@
+1|Hospital 12 Octubre - Madrid|01-09-2020|fiebre alta|20
+1|Hospital 12 Octubre - Madrid|02-09-2020|fiebre alta|20
+1|Hospital 12 Octubre - Madrid|03-09-2020|fiebre alta|20
+1|Hospital 12 Octubre - Madrid|04-09-2020|fiebre alta|20
+1|Hospital 12 Octubre - Madrid|05-09-2020|fiebre alta|20
+1|Hospital 12 Octubre - Madrid|06-09-2020|fiebre alta|20
+1|Hospital 12 Octubre - Madrid|07-09-2020|fiebre alta|20
+1|Hospital 12 Octubre - Madrid|08-09-2020|dolor de cabeza|50
+1|Hospital 12 Octubre - Madrid|09-09-2020|dolor de cabeza|50
+1|Hospital 12 Octubre - Madrid|10-09-2020|dolor de cabeza|50
+1|Hospital 12 Octubre - Madrid|11-09-2020|sin sintomas|100
+1|Hospital 12 Octubre - Madrid|12-09-2020|sin sintomas|100
+1|Hospital 12 Octubre - Madrid|13-09-2020|sin sintomas|100
+1|Hospital 12 Octubre - Madrid|14-09-2020|sin sintomas|100
+1|Hospital 12 Octubre - Madrid|15-09-2020|sin sintomas|100
+2|Hospital 12 Octubre - Madrid|01-09-2020|sin sintomas|100
+2|Hospital 12 Octubre - Madrid|02-09-2020|sin sintomas|100
+2|Hospital 12 Octubre - Madrid|03-09-2020|sin sintomas|100
+2|Hospital 12 Octubre - Madrid|04-09-2020|sin sintomas|100
+2|Hospital 12 Octubre - Madrid|05-09-2020|sin sintomas|100
+2|Hospital 12 Octubre - Madrid|06-09-2020|sin sintomas|100
+2|Hospital 12 Octubre - Madrid|07-09-2020|sin sintomas|100
+2|Hospital 12 Octubre - Madrid|08-09-2020|sin sintomas|100
+2|Hospital 12 Octubre - Madrid|09-09-2020|sin sintomas|100
+2|Hospital 12 Octubre - Madrid|10-09-2020|sin sintomas|100
+2|Hospital 12 Octubre - Madrid|11-09-2020|sin sintomas|100
+2|Hospital 12 Octubre - Madrid|12-09-2020|sin sintomas|100
+2|Hospital 12 Octubre - Madrid|13-09-2020|sin sintomas|100
+2|Hospital 12 Octubre - Madrid|14-09-2020|sin sintomas|100
+2|Hospital 12 Octubre - Madrid|15-09-2020|sin sintomas|100
+3|Hospital 12 Octubre - Madrid|01-09-2020|fiebre alta|20
+3|Hospital 12 Octubre - Madrid|02-09-2020|fiebre alta|20
+3|Hospital 12 Octubre - Madrid|03-09-2020|fiebre alta|20
+3|Hospital 12 Octubre - Madrid|04-09-2020|fiebre alta|20
+3|Hospital 12 Octubre - Madrid|05-09-2020|fiebre alta|20
+3|Hospital 12 Octubre - Madrid|06-09-2020|fiebre alta|20
+3|Hospital 12 Octubre - Madrid|07-09-2020|fiebre alta|20
+3|Hospital 12 Octubre - Madrid|08-09-2020|fiebre alta|20
+3|Hospital 12 Octubre - Madrid|09-09-2020|fiebre alta|20
+3|Hospital 12 Octubre - Madrid|10-09-2020|fiebre media|30
+3|Hospital 12 Octubre - Madrid|11-09-2020|fiebre media|30
+3|Hospital 12 Octubre - Madrid|12-09-2020|fiebre media|30
+3|Hospital 12 Octubre - Madrid|13-09-2020|fiebre media|30
+3|Hospital 12 Octubre - Madrid|14-09-2020|fatiga|60
+3|Hospital 12 Octubre - Madrid|15-09-2020|fatiga|60
+4|Hospital 12 Octubre - Madrid|01-09-2020|sin sintomas|100
+4|Hospital 12 Octubre - Madrid|02-09-2020|sin sintomas|100
+4|Hospital 12 Octubre - Madrid|03-09-2020|sin sintomas|100
+4|Hospital 12 Octubre - Madrid|04-09-2020|sin sintomas|100
+4|Hospital 12 Octubre - Madrid|05-09-2020|sin sintomas|100
+4|Hospital 12 Octubre - Madrid|06-09-2020|sin sintomas|100
+4|Hospital 12 Octubre - Madrid|07-09-2020|sin sintomas|100
+4|Hospital 12 Octubre - Madrid|08-09-2020|sin sintomas|100
+4|Hospital 12 Octubre - Madrid|09-09-2020|sin sintomas|100
+4|Hospital 12 Octubre - Madrid|10-09-2020|sin sintomas|100
+4|Hospital 12 Octubre - Madrid|11-09-2020|sin sintomas|100
+4|Hospital 12 Octubre - Madrid|12-09-2020|sin sintomas|100
+4|Hospital 12 Octubre - Madrid|13-09-2020|sin sintomas|100
+4|Hospital 12 Octubre - Madrid|14-09-2020|sin sintomas|100
+4|Hospital 12 Octubre - Madrid|15-09-2020|sin sintomas|100
+5|Hospital 12 Octubre - Madrid|01-09-2020|fiebre alta|20
+5|Hospital 12 Octubre - Madrid|02-09-2020|fiebre alta|20
+5|Hospital 12 Octubre - Madrid|03-09-2020|fiebre media|30
+5|Hospital 12 Octubre - Madrid|04-09-2020|fiebre media|30
+5|Hospital 12 Octubre - Madrid|05-09-2020|fiebre media|30
+5|Hospital 12 Octubre - Madrid|06-09-2020|fiebre alta|20
+5|Hospital 12 Octubre - Madrid|07-09-2020|fiebre alta|20
+5|Hospital 12 Octubre - Madrid|08-09-2020|fiebre media|30
+5|Hospital 12 Octubre - Madrid|09-09-2020|fiebre media|30
+5|Hospital 12 Octubre - Madrid|10-09-2020|fatiga|60
+5|Hospital 12 Octubre - Madrid|11-09-2020|fatiga|60
+5|Hospital 12 Octubre - Madrid|12-09-2020|fatiga|60
+5|Hospital 12 Octubre - Madrid|13-09-2020|fatiga|60
+5|Hospital 12 Octubre - Madrid|14-09-2020|fatiga|60
+5|Hospital 12 Octubre - Madrid|15-09-2020|fatiga|60

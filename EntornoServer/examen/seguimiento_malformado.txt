@@ -1,0 +1,10 @@
+1|Hospital 12 Octubre - Madrid|02-09-2020|fiebre alta|0|otro campo
+1|Hospital 12 Octubre - Madrid|03-09-2020|fiebre alta|80
+2|Hospital 12 Octubre - Madrid|13-09-2020|sin sintomas|100
+2|Hospital 12 Octubre - Madrid|14-09-2020|sin sintomas|50
+3|Hospital 12 Octubre - Madrid|14-09-2020|fatiga|60
+3|Hospital 12 Octubre - Madrid|15-09-2020|fatiga|30
+4|Hospital 12 Octubre - Madrid|01-09-2020|sin sintomas|100
+4|Hospital 12 Octubre - Madrid|02-09-2020|sin sintomas|80
+5|Hospital 12 Octubre - Madrid|04-09-2020|fiebre media|30
+5|Hospital 12 Octubre - Madrid|05-09-2020|fiebre media|30

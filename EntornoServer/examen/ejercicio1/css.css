@@ -1,0 +1,11 @@
+body{
+    width: 500px;
+    margin:auto ;
+    margin-top: 100px;
+}
+input,label{
+    display: block;
+}
+.enviar,label{
+    margin-top: 10px;
+}
