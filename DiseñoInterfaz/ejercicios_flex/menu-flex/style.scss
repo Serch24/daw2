@@ -8,6 +8,7 @@
 }
 
 .main {
+    $size_grow:1;
     display: flex;
     .contenedor {
         width: 100%;
@@ -30,20 +31,26 @@
             background-color: rgb(40, 51, 47);
         }
         .uno {
-            flex-grow: 1;
+            flex-grow: $size_grow;
         }
         .dos {
-            flex-grow: 1;
+            flex-grow: $size_grow;
         }
         .tres {
-            flex-grow: 1;
+            flex-grow: $size_grow;
         }
         .cuatro {
-            flex-grow: 1;
+            flex-grow: $size_grow;
         }
     }
 }
-
+.container{
+    h1{
+        margin-top: 10px;
+        text-align: center;
+        background-color: aqua;
+    }
+}
 @media (max-width: 590px) {
     .main {
         .contenedor {
