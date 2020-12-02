@@ -1,0 +1,28 @@
+*{
+    font-size: 1.7rem;
+    margin:0;
+}
+@mixin margen($elmargen){
+    margin-top: $elmargen + px;
+}
+form{
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+    .edad_persona{
+        display: block;
+    }
+    .bt_enviar{
+        @include margen(10);
+        margin-bottom: 10px;
+        cursor: pointer;
+        &:hover{
+            background-color: rgba(70, 73, 73, 0.3);
+
+        }
+    }
+}
+.menu{
+    width: 400px;
+    margin: auto;
+}
