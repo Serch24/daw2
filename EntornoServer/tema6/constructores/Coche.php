@@ -38,5 +38,7 @@ class Coche{
 
 }
 //PROGRAMA PRINCIPAL.
-$mio = new Coche("negro",2);
+$argumentos = new Coche('arroz');
+
+
 ?>

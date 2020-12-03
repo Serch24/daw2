@@ -1,3 +1,12 @@
 eog => imagenes
 stromkitty
 docker run --rm -it -p 80:80 vulnerables/web-dvwa
+
+dw| 	Borrar desde el cursor hasta el final de la palabra actual. Por ejemplo, si estamos encima de la letra m de la palabra automóvil, ejecutando dw quedaría tan sólo la palabra auto. Recuerda que w avanza hasta el siguiente separador de palabra y W hasta el siguiente espacio entre palabras, de modo que también podemos usar dW si es lo que nos interesa.
+db |	Borrar desde el cursor hasta el principio de la palabra actual. Por ejemplo, si estamos encima de la letra m de la palabra automóvil, ejecutando db quedaría tan sólo la palabra móvil.
+diw| 	Borrar la palabra bajo el cursor (completa), desde su principio hasta su final, estemos donde estemos dentro de la palabra.
+daw| 	Borrar la palabra bajo el cursor, igual que diw, pero en este caso si existe un espacio tras la palabra también lo borra.
+dis |	Borrar la frase (no línea, sino frase hasta el próximo punto) sobre la que está el cursor.
+das| 	Igual que dis, pero si existe un espacio tras la frase también lo elimina.
+dG |	Borrar desde la posición actual del cursor hasta el final del fichero.
+dgg |	Borrar desde la posición actual del cursor hasta el principio del fichero. 
