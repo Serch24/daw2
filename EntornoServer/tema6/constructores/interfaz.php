@@ -26,7 +26,10 @@ echo "esto es un ejemplo";
 echo "esto es un ejemplo";
 echo "esto es un ejemplo";
 echo "esto es un ejemplo";
-
+echo "esto no es un ejemplo";
+function probando($a,$b){
+    return $a + $b;
+}
 
 ?>
 
