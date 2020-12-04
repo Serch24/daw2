@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+   <title>Programa con definición de objetos</title>
+   <script type="text/javascript">
+         function Alumno (txtDNI, txtNombre, txtCodigo, fNacimiento) {
+                    // Definición de propiedades (valores)
+                        this.DNI             = txtDNI;
+                        this.Nombre          = txtNombre;
+                        this.CodPostal       = txtCodigo;
+                        this.FechaNacimiento = fNacimiento;
+                    // Definición de métodos (funciones)
+                        this.edad = fnEdad;
+         }
+      // Función relativa al método
+         function fnEdad ()  {
+                        with (this) {
+                             var fechaHoy = new Date();
+                             return fechaHoy.getTime() - FechaNacimiento.getTime();
+                        }
+         }
+         function Aula (txtDenominacion, txtLocalizacion, nCapacidad, tAlumnos) {
+                    // Definición de propiedades
+                        this.Denominacion = txtDenominacion;
+                        this.Localizacion = txtLocalizacion;
+                        this.Capacidad    = nCapacidad;
+                        this.Alumnos      = tAlumnos;
+                    // Definición de métodos
+                        this.plazasLibres = fnPlazas;
+                        this.alumnoMenor  = fnMenor;
+                        this.sacarLista   = fnLista;
+         }
+         function fnPlazas () {
+                        with (this) {
+                             return Capacidad - Alumnos.length;
+                        }
+         }
+         function fnMenor () {
+                    // Ojo, controlar qué pasa si no hay alumnos
+                        with (this) {
+                             var indice = 0;
+                             var menor  = Alumnos[0].edad();
+                             for (var i=1; i<Alumnos.length; i++) {
+                                 if (Alumnos[i].edad() < menor) {
+                                    indice = i;
+                                 }
+                             }
+                             return Alumnos[indice].Nombre;
+                        }
+         }
+         function fnLista () {
+                        with (this) {
+                             for (var i=0;i<Alumnos.length; i++) {
+                                 document.write(Alumnos[i].Nombre + "<br>");
+                             }
+                        }
+         }
+   </script>
+ </head>
+ <body>
+   <script type="text/javascript">
+         var datos = new Array();
+         function pedirDatos() {
+                  var masAulas = true;
+                  var masAlumnos = true;
+                  var i = 0;
+                  var j = 0;
+                  while (masAulas) {
+                      i = datos.length;
+                      datos[i] = pedir_aula();
+                      datos[i].Alumnos = new Array();
+                      masAlumnos = true;
+                      while (masAlumnos && datos[i].plazasLibres() > 0) {
+                            j = datos[i].Alumnos.length;
+                            datos[i].Alumnos[j] = pedir_alumno();
+                            masAlumnos = confirm("Más alumnos");
+                      }
+                      masAulas = confirm("Más aulas");
+                  }
+         }
+         function pedir_aula() {
+                  var mi_aula = new Aula();
+                  mi_aula.Denominacion = pedir_denominacion();
+                  mi_aula.Localizacion = prompt("Localización", "Edificio A, planta 1ª");
+                  mi_aula.Capacidad    = parseInt(prompt("Capacidad del aula", 30));
+                  return mi_aula;
+         }
+         function pedir_denominacion() {
+                  var repe  = false;
+                  var denom = "";
+                  var i     = 0;
+                  do {
+                     repe = false;
+                     denom = prompt("Denominación del aula o grupo", "2º DAW");
+                     for (i=0; i < datos.length; i++) {
+                         if (denom == datos[i].Denominacion) {
+                            alert ("La denominación del aula ya existe");
+                            repe = true;
+                            break;
+                         }
+                      }
+                  } while (repe);
+                  return denom;
+         }
+         function pedir_alumno() {
+                  var mi_alumno = new Alumno();
+                  mi_alumno.DNI = prompt("DNI", "nnnnnnnnX");
+                  mi_alumno.Nombre = prompt("Nombre", "Pepe");
+                  mi_alumno.CodPostal = pedir_cod();
+                  mi_alumno.FechaNacimiento = pedir_fecha();
+                  return mi_alumno;
+         }
+         function pedir_cod() {
+                  var codigo = "";
+                  var expre = /^[0-5][0-9]{4}$/;
+//                var expre = /^((0[1-9])|([1-4][0-9])|(5[012]))[0-9]{3}$/;
+                  var erroneo = true;
+                  do {
+                     codigo = prompt("Introduzca código postal", "nnnnn");
+                     if (expre.test(codigo) && parseInt(codigo) > 999 && parseInt(codigo) < 53000) {
+                        erroneo = false;
+                     } else {
+                        alert ("Código postal erroneo. Introduzca otro");  
+                     }
+                  } while (erroneo);
+                  return codigo;
+         }
+         function pedir_fecha() {
+                  var ano = 0;
+                  var mes = 0;
+                  var dia = 0;
+                  var fecha;
+                  var hoy = new Date();
+                  var edad = 0;
+                  do {
+                     do {
+                        dia = parseInt(prompt("Introduzca día de nacimiento", 1));
+                     } while (dia < 1 || dia > 31);
+                     do {
+                        mes = parseInt(prompt("Introduzaca mes de nacimiento", 1));
+                     } while (mes < 1 || mes > 12);
+                     ano = parseInt(prompt("Introduzca año de nacimiento", 2000));
+                     edad = hoy.getFullYear() - ano;
+                     if (mes < (hoy.getMonth()+1)) {
+                        edad -= 1;
+                     } else {
+                       if ((mes == (hoy.getMonth() + 1)) && dia < hoy.getDate()) {
+                          edad -= 1;
+                       }
+                     }
+                  } while (edad < 12);
+                  fecha = new Date(ano, mes-1, dia);
+                  return fecha;
+         }
+         function mostrarBenjamines () {
+                  for (var i=0; i < datos.length; i++) {
+                        alert(datos[i].Denominacion + " - " + datos[i].alumnoMenor());
+//                      document.write(datos[i].Denominacion + " - " + datos[i].alumnoMenor() + "<br>");
+                  }
+         }
+         function mostrarListado () {
+                  var nomaula = prompt("Nombre del aula o grupo", "2º DAW");
+                  for (var i = 0; i < datos.length; i++) {
+                      if (nomaula == datos[i].Denominacion) {
+                         datos[i].sacarLista();
+                      }
+                  }
+         }
+    </script>
+OPCIONES<br><br>
+<a href="javascript:pedirDatos()">Introducir datos</a><br>
+<a href="javascript:mostrarBenjamines()">MOstrar benjamines</a><br>
+<a href="javascript:mostrarListado()">Mostrar listado</a><br>
+  </body>
+</html>
