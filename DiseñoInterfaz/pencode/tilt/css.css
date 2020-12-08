@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+}
+
+.main {
+    width: 500px;
+    margin: 40px auto 50px auto;
+    height: 400px;
+    background-color: rgb(24, 26, 27);
+    transform-style: preserve-3d;
+    transition: all cubic-bezier(.23, 1, .32, 1) .2s;
+    background-image: url("http://lorempixel.com/600/500/cats");
+    background-size: cover;
+}
+
+.main:hover {
+    box-shadow: 2px -3px 85px -26px rgba(30, 30, 60, 1);
+    width: 600px;
+    height: 500px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}

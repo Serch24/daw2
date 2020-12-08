@@ -8,7 +8,8 @@ class Coche{
 	const VELOCIDAD_MAXIMA = 120;
 	const COLOR_SERIE = "blanco";
 	const VELOCIDAD_INICIAL = 0;
-	
+	const A = 1;
+	const B = 3;
 	//constructores
 	/*
 	- no recibe nada: inicialice los valores a color=<COLOR DE SERIE>, velocidad =<VELOCIDAD INICIAL >
