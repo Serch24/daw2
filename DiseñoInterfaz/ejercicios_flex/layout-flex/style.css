@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+}
+
+.header {
+  height: 200px;
+  background-color: #bce074;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main nav {
+  background-color: blue;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 200px;
+          flex: 0 0 200px;
+}
+
+.main .centro {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 300px;
+  height: 500px;
+  background-image: url("accessible-icon-brands.svg");
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-repeat: no-repeat;
+}
+
+.main .aside {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 200px;
+          flex: 0 0 200px;
+  background-color: blueviolet;
+}
+
+.footer {
+  background-color: #7c653a;
+  height: 200px;
+}
+/*# sourceMappingURL=style.css.map */

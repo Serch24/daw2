@@ -1,0 +1,32 @@
+$heigth:200px;
+*{
+    margin: 0;
+}
+.header{
+    height: $heigth;
+    background-color: rgb(188, 224, 116);
+}
+.main{
+    display: flex;
+    nav{
+        background-color: blue;
+        flex: 0 0 200px;
+
+    }
+    .centro{
+        flex:1;
+        width: 300px;
+        height: 500px;
+        background-image: url("accessible-icon-brands.svg");
+        object-fit: cover;
+        background-repeat: no-repeat;
+    }
+    .aside{
+        flex: 0 0 200px;
+        background-color: blueviolet;
+    }
+}
+.footer{
+    background-color: rgb(124, 101, 58);
+    height: $heigth;
+}
