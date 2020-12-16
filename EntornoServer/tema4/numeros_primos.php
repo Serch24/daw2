@@ -12,6 +12,7 @@ Utlizarla en una program donde muestres los
     <?php
         function es_primo()
         {
+                echo "hola";
             /* do {
                 $con = 2;
                 

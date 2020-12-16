@@ -26,6 +26,10 @@
     <li>$cancion4</li>
     <li>$cancion5</li>
     </ol>";
+   echo "bien";
+   function lol(){
+
+   }
 
     ?>
 </body>
