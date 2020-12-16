@@ -6,4 +6,4 @@ const eldiv = document.querySelector(".lol")
  console.log(`Has presionado ${contador}`)
  contador++
 })
-
+const a = 2;
