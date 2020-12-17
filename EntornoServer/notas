@@ -1,0 +1,7 @@
+192.168.96.45:5434 -> Origen socket
+8.545.30:80 -> Destino socker web
+show databases
+show tables
+use nombre_tabla
+desc nombre_campo\G
+source ruta_del_script.sql
