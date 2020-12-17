@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+.contenedor {
+    display: flex;
+    background-color: rgb(166, 236, 236);
+    min-height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+    .input {
+        input[type="text"] {
+            display: block;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        .enviar {
+            padding: 5px;
+        }
+    }
+    .chats {
+        width: 300px;
+        min-height: 300px;
+        background-color: rgba(221, 205, 186, 0.712);
+    }
+}
+
+@media(max-width:500px) {
+    .contenedor {
+        flex-direction: column;
+        .input {
+            order: 2;
+        }
+        .chats {
+            height: 300px;
+            overflow-y: scroll;
+        }
+    }
+}
