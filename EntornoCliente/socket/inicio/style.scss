@@ -14,11 +14,19 @@ p {
 
 .contenedor {
     display: flex;
-    background-color: rgb(166, 236, 236);
+    background-color: rgb(201, 245, 245);
     min-height: 100vh;
     justify-content: space-around;
     align-items: center;
     .input {
+        display: flex;
+        flex-direction: column;
+        .escribir{
+            width: 300px;
+            height: 100px;
+            background-color: rgba(182, 212, 238, 0.541);
+            margin-bottom: 10px;
+        }
         input[type="text"] {
             display: block;
             padding: 15px;
@@ -27,11 +35,35 @@ p {
         .enviar {
             padding: 5px;
         }
+        .repe{
+            width: 300px;
+            height: 200px;
+            margin-top: 10px;
+            background-color: rgba(172, 221, 205, 0.692);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            span{
+                color: black;
+                font-weight: 900;
+            }
+        }
+        .online{
+            min-width: 140px;
+            height: 50px;
+            background-color: rgba(161, 145, 120, 0.527);
+            margin-bottom: 20px;
+            display: block;
+        }
+        #formu{
+            margin-bottom: 10px;
+        }
     }
     .chats {
-        width: 300px;
-        min-height: 300px;
+        width: 400px;
+        height: 90vh;
         background-color: rgba(221, 205, 186, 0.712);
+        overflow-y: scroll;
     }
 }
 

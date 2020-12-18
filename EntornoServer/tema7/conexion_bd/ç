@@ -1,0 +1,19 @@
+<?php
+	$conexion = new mysqli('db','root','serch','daw2');
+	if($conexion->connect_errno !=0){
+		exit("errorrrr");
+	}
+	$dato = "insert into usuarios(login,clave)
+VALUES ('Andres',2322)";
+		if($conexion->query($dato)=== TRUE){
+				  echo "todo gucci";
+		}else{
+			echo "nope";
+		}
+
+		while($a = $conexion->affected_rows){
+			print_r($a);
+		}
+	$conexion->close();
+	
+?>

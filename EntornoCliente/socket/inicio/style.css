@@ -17,13 +17,30 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #a6ecec;
+  background-color: #c9f5f5;
   min-height: 100vh;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.contenedor .input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contenedor .input .escribir {
+  width: 300px;
+  height: 100px;
+  background-color: rgba(182, 212, 238, 0.541);
+  margin-bottom: 10px;
 }
 
 .contenedor .input input[type="text"] {
@@ -36,10 +53,44 @@ p {
   padding: 5px;
 }
 
-.contenedor .chats {
+.contenedor .input .repe {
   width: 300px;
-  min-height: 300px;
+  height: 200px;
+  margin-top: 10px;
+  background-color: rgba(172, 221, 205, 0.692);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contenedor .input .repe span {
+  color: black;
+  font-weight: 900;
+}
+
+.contenedor .input .online {
+  min-width: 140px;
+  height: 50px;
+  background-color: rgba(161, 145, 120, 0.527);
+  margin-bottom: 20px;
+  display: block;
+}
+
+.contenedor .input #formu {
+  margin-bottom: 10px;
+}
+
+.contenedor .chats {
+  width: 400px;
+  height: 90vh;
   background-color: rgba(221, 205, 186, 0.712);
+  overflow-y: scroll;
 }
 
 @media (max-width: 500px) {
