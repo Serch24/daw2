@@ -17,6 +17,16 @@
 			print_r($a);
 		}
 		echo "</pre>";
+
+/*CREATE USER alumno@localhost IDENTIFIED BY '1234'*/
+/*GRANT <PRIVILEGIO> ON <SERVIDOR/BD/TABLA/CAMPOS> TO <USUARIO>*/
+/*GRANT SELECT(login) on daw2.usuarios to alumno@localhost;*/
+/*drop user;*/
+/*REVOKE SELECT(login) ON daw2.usuarios FROM alumno@localhost; AQui le quito permiso de todo*/
+/*select \* from mysql.columns_priv;*/
+/*select \* from mysql.tables_priv;*/
+/*GRANT SELECT,UPDATE ON daw2.usuarios TO alumno@localhost;*/
+/*GRANT INSERT ON daw2.* TO alumno@localhost;*/
 	$conexion->close();
 	
 ?>
