@@ -1,0 +1,18 @@
+services:
+  web:
+    build: .
+    ports:
+      -  8001:80
+    volumes:
+      - ../ahorcado:/var/www/html
+    links:
+      - mysql 
+  mysql:
+    image: mysql:8.0.13
+    command: --default-authentication-plugin=mysql_native_password
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=1234  
+    volumes:
+      - ./lasBasesDeDatos:/var/lib/mysql

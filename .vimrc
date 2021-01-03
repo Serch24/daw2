@@ -11,7 +11,11 @@ set nowritebackup
 set cmdheight=2
 set laststatus=2
 set noshowmode
-color koehler
+set incsearch
+set cursorcolumn
+set cursorline
+colorscheme desert
+""color darkblue 
 
 call plug#begin()
 Plug 'preservim/nerdtree'
@@ -19,7 +23,13 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install()} }
 Plug 'preservim/nerdcommenter'
 Plug 'itchyny/lightline.vim'
+Plug 'mattn/emmet-vim'
+Plug 'Yggdroot/indentLine'
 call plug#end()
+
+"" indentado de lineas
+let g:indentLine_char = 'x'
+
 
 map <c-t> <esc>:tabnew<cr>                                                      
 map <c-e> <esc>:tabnext<cr>                                                     
