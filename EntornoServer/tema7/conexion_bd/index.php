@@ -17,6 +17,7 @@
 			print_r($a);
 		}
 		echo "</pre>";
+    echo "hola";
 
 /*CREATE USER alumno@localhost IDENTIFIED BY '1234'*/
 /*GRANT <PRIVILEGIO> ON <SERVIDOR/BD/TABLA/CAMPOS> TO <USUARIO>*/

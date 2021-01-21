@@ -1,20 +1,12 @@
-/* let arrai = ["1.jpg","2.jpg"];
-var cont = 0;
-document.images[0].onclick = ()=>{
-    if (cont == 1) {
-        cont=0;
-    }else{
-        cont++;
-    }
-    // open(arrai[cont]);
-    document.images[0].src = arrai[cont];
-    console.log(cont);
-} */
-
-async function api(url = "") {
-    await fetch(url)
-    .then(function(responde){
-        console.log(responde.blob());
-    })
-}
-api("https://images.ctfassets.net")
+let arrai = ["1.jpg", "2.jpg"];
+let contador = 1;
+const img = document.querySelector("#lenin");
+img.addEventListener("click", () => {
+        if (contador == 1) {
+                img.setAttribute("src", arrai[contador]);
+                contador = 0;
+        } else {
+                img.setAttribute("src", arrai[contador]);
+                contador++;
+        }
+});
