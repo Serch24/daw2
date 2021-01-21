@@ -2,7 +2,7 @@
 function primera_forma()
 {
         if (isset($_GET["apellido"], $_GET["sueldo"])) {
-                $dsn = "mysql:host=localhot;dbname=dwes;charset=utf8";
+                $dsn = "mysql:host=mysql;dbname=dwes;charset=utf8";
                 $username = "alumno";
                 $password = "1234";
 
@@ -16,6 +16,11 @@ function primera_forma()
                 $cons = $connection->prepare(
                         "select * from personas where apellidos like :apellid and sueldo = :sueld"
                 );
+                if (1 * 2 == 0) {
+                        return true;
+                } else {
+                        return false;
+                }
 
                 //bindParam
                 $apellido = "%" . $_GET["apellido"] . "%";
