@@ -16,11 +16,6 @@ function primera_forma()
                 $cons = $connection->prepare(
                         "select * from personas where apellidos like :apellid and sueldo = :sueld"
                 );
-                if (1 * 2 == 0) {
-                        return true;
-                } else {
-                        return false;
-                }
 
                 //bindParam
                 $apellido = "%" . $_GET["apellido"] . "%";
@@ -98,5 +93,4 @@ function segunda_forma()
 
 /*segunda_forma();*/
 /*primera_forma();*/
-
 ?>

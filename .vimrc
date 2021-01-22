@@ -30,7 +30,7 @@ call plug#end()
 "" indentado de lineas
 let g:indentLine_char = 'x'
 
-
+""pestañas
 map <c-t> <esc>:tabnew<cr>                                                      
 map <c-e> <esc>:tabnext<cr>                                                     
 map <c-w> <esc>:tabclose<cr>                                                    
