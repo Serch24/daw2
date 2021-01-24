@@ -12,9 +12,7 @@ set cmdheight=2
 set laststatus=2
 set noshowmode
 set incsearch
-set cursorcolumn
-set cursorline
-colorscheme desert
+colorscheme koehler 
 ""color darkblue 
 
 call plug#begin()
@@ -25,12 +23,21 @@ Plug 'preservim/nerdcommenter'
 Plug 'itchyny/lightline.vim'
 Plug 'mattn/emmet-vim'
 Plug 'Yggdroot/indentLine'
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 call plug#end()
 
 "" indentado de lineas
 let g:indentLine_char = 'x'
 
-""pestañas
+"" prettier
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_require_pragma = 0
+let g:prettier#exec_cmd_async = 1
+autocmd BufWritePre *.php Prettier
+
+"" arreglar los errores con ficheros md
+au InsertLeave *.md CocCommand markdownlint.fixAll
+
 map <c-t> <esc>:tabnew<cr>                                                      
 map <c-e> <esc>:tabnext<cr>                                                     
 map <c-w> <esc>:tabclose<cr>                                                    

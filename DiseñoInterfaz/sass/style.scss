@@ -1,0 +1,12 @@
+$bg-color: #fff;
+$bg-text: blue;
+
+body {
+        background-color: $bg-color;
+        h1 {
+                color: $bg-text;
+                &:hover {
+                        background-color: #fe8019;
+                }
+        }
+}
