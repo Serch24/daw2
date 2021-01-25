@@ -1,11 +1,11 @@
 body {
-  background-color: #fff;
+        background-color: #fff;
 }
 body h1 {
-  color: blue;
+        color: blue;
 }
 body h1:hover {
-  background-color: #fe8019;
+        background-color: #fe8019;
 }
 
 /*# sourceMappingURL=style.css.map */

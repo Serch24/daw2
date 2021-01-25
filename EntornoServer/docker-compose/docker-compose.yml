@@ -4,7 +4,7 @@ services:
     ports:
       - 8001:80
     volumes:
-      - ../tema7/pdo/:/var/www/html
+      - ../tema7/pdo/crear_tabla_pdo/:/var/www/html
     links:
       - mysql
   mysql:

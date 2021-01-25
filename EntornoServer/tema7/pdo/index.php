@@ -17,6 +17,7 @@ $attributes = [
         "SERVER_VERSION",
         "TIMEOUT",
 ];
+
 foreach ($attributes as $val) {
         echo "<p>PDO::ATTR_$val: ";
         try {
