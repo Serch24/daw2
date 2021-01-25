@@ -1,17 +1,23 @@
 syntax on
 
 set encoding=utf-8
+set cursorline
 set tabstop=3 
 set expandtab
 set smartindent
+set termguicolors
 set nu
 set rnu
+set joinspaces
 set nobackup
 set nowritebackup
+set wrap 
+set confirm
 set cmdheight=2
 set laststatus=2
 set noshowmode
 set incsearch
+set hlsearch
 colorscheme koehler 
 ""color darkblue 
 
@@ -26,6 +32,9 @@ Plug 'Yggdroot/indentLine'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 call plug#end()
 
+""alias para guardar con sudo vim
+command! -nargs=0 Sw wq !sudo tee % > /dev/null
+
 "" indentado de lineas
 let g:indentLine_char = 'x'
 
@@ -38,6 +47,7 @@ autocmd BufWritePre *.php Prettier
 "" arreglar los errores con ficheros md
 au InsertLeave *.md CocCommand markdownlint.fixAll
 
+"" mapeos
 map <c-t> <esc>:tabnew<cr>                                                      
 map <c-e> <esc>:tabnext<cr>                                                     
 map <c-w> <esc>:tabclose<cr>                                                    
