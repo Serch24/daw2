@@ -3,3 +3,4 @@ style.css.map
 EntornoCliente/socket/node_modules*
 laravel_pruebas
 lasBasesDeDatos/
+docker-compose.yml
