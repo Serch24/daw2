@@ -6,7 +6,7 @@ class conectaBD
         {
                 $dsn = "mysql:host=mysql;dbname=$database;charset=utf8";
                 try {
-                        $this->conn = new PDO($dsn, "task_user", "1234", [
+                        $this->conn = new PDO($dsn, "root", "1234", [
                                 PDO::ATTR_PERSISTENT => true,
                         ]);
                 } catch (PDOException $e) {
