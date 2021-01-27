@@ -1,6 +1,6 @@
 syntax on
 
-set encoding=utf-8
+set encoding=UTF-8
 set cursorline
 set tabstop=3 
 set expandtab
@@ -8,6 +8,7 @@ set smartindent
 set termguicolors
 set nu
 set rnu
+set complete+=t
 set joinspaces
 set nobackup
 set nowritebackup
@@ -30,7 +31,44 @@ Plug 'itchyny/lightline.vim'
 Plug 'mattn/emmet-vim'
 Plug 'Yggdroot/indentLine'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
+
+"" Para colorear el nerdtree :) 
+function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
+ exec 'autocmd FileType nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
+ exec 'autocmd FileType nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+endfunction
+
+call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
+call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
+call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('config', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('html', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515')
+call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
+call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
+call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
+call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
+call NERDTreeHighlightFile('ds_store', 'Gray', 'none', '#686868', '#151515')
+call NERDTreeHighlightFile('gitconfig', 'Gray', 'none', '#686868', '#151515')
+call NERDTreeHighlightFile('gitignore', 'Gray', 'none', '#686868', '#151515')
+call NERDTreeHighlightFile('bashrc', 'Gray', 'none', '#686868', '#151515')
+call NERDTreeHighlightFile('bashprofile', 'Gray', 'none', '#686868', '#151515')
+
+"" nerdtree
+autocmd VimEnter * NERDTree | wincmd p
+let NERDTreeShowHidden=1
+
+" Exit Vim if NERDTree is the only window left.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
+    \ quit | endif
+
+let g:NERDTreeDirArrowExpandable = '=>'
+let g:NERDTreeDirArrowCollapsible = '▾'
 
 ""alias para guardar con sudo vim
 command! -nargs=0 Sw wq !sudo tee % > /dev/null
@@ -50,7 +88,7 @@ au InsertLeave *.md CocCommand markdownlint.fixAll
 "" mapeos
 map <c-t> <esc>:tabnew<cr>                                                      
 map <c-e> <esc>:tabnext<cr>                                                     
-map <c-w> <esc>:tabclose<cr>                                                    
+nnoremap <space> zz <esc>:tabclose<cr>                                                    
 map <C-n> :NERDTreeToggle<CR>
 "" Con esto puedo comentar varias lineas :D
 map <C-a> <plug>NERDCommenterMinimal<CR>
@@ -69,3 +107,4 @@ function! s:check_back_space() abort
 endfunction
 
 let g:coc_snippet_next = '<tab>'
+

@@ -1,0 +1,29 @@
+body {
+  background-color: peru;
+}
+body .fondo-rojo {
+  background-color: red;
+}
+body .fondo-verde {
+  background-color: green;
+}
+body #bt2 {
+  background-color: red;
+  border: 1px solid black;
+  border-radius: 5%;
+  padding: 1rem;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+body #bt3 {
+  background-color: green;
+  border: 1px solid black;
+  border-radius: 5%;
+  padding: 1rem;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */

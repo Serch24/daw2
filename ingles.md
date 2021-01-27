@@ -91,3 +91,20 @@
 3. You need to evaluate information from websites critically.
 
 4. We searched through some of the back issues.
+
+<!--## Speaking
+
+A. Do you use variables in your css?
+
+B. yes, of course, it helps me to get/have order in my code!.
+
+A. And do you know what is CSS?
+
+B. it means Cascading Style Sheets.
+
+A.-->
+
+## Exersices
+
+30.1 Complete the sentences with work, job or career.
+
