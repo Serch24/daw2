@@ -1,21 +1,27 @@
-const url = "http://localhost:8001/";
-let info = {
-        nombre: "sergio",
-        apellido: "Yaccelga",
-};
-let misHeaders = new Headers();
-misHeaders.append("Accept", "application/json");
-/*misHeaders.append("Content-Type", "application/json; charser=UTF-8");*/
-misHeaders.append("Content-Type", "application/json");
+const url = "http://localhost:4222";
+const bt = document.querySelector(".bt"); 
+const miform = document.querySelector("form");
+const form = new FormData(miform);
 
-fetch(url, {
-        headers: misHeaders,
-        method: "POST",
-        body: JSON.stringify(info),
-})
-        .then((res) => {
-                /*return res.json();*/
-                console.log(res)
+bt.addEventListener('click', (e)=>{
+        e.preventDefault();
+        console.log("detenido uwu");
+
+        const init = {
+                method: miform.method,
+                body: form
+        }
+
+
+        fetch(miform.action,init).then((res)=>{
+                if(res.ok){
+                        /*console.log(res.json());*/
+                        let tmp = res.json();
+                        console.log(tmp)
+                }else{
+                        throw new Error(res.statusText);
+                }
+        }).catch((err)=>{
+                console.log("Ocurrió algo",err);
         })
-        .catch((err) => console.log("error: ", err))
-        .then((re) => console.log(re));
+})

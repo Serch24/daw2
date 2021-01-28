@@ -36,21 +36,49 @@ class conectaBD
 
         public function consultaTareas($fila_inicio, $num_filas)
         {
-                $num_rows = 0;
+                if (!is_numeric($num_filas) or !is_numeric($fila_inicio)) {
+                        echo "<h1>Las variables deben ser numeros!!!</h1>";
+                        exit();
+                }
                 try {
-                        $tmp = $this->conn->query("select count(*) from tasks");
-                        $tmp->setFetchMode(PDO::FETCH_ASSOC);
-                        while ($a = $tmp->fetch()) {
-                                $num_rows = $a["count(*)"];
-                        }
-                        if ((int) $num_rows < (int) $num_filas) {
-                                echo "no se puede";
+                        if ($this->totalFIlas() === 0) {
+                                echo "<p>NO hay filas para mostrar</p>";
+                                exit();
+                        } elseif (
+                                $this->totalFIlas() <
+                                $num_filas - $fila_inicio
+                        ) {
+                                echo "<p>NO hay tantas filas</p>";
+                                exit();
                         } else {
-                                echo "siisisisis";
+                                $resul = $this->conn->query(
+                                        "select * from tasks limit $fila_inicio,$num_filas"
+                                );
+
+                                //se muestran las filas
+                                foreach (
+                                        $resul->fetchAll(PDO::FETCH_ASSOC)
+                                        as $value
+                                ) {
+                                        foreach ($value as $value2) {
+                                                echo "<p>$value2</p>";
+                                        }
+                                }
                         }
                 } catch (PDOException $e) {
                         echo "error" . $e->getMessage();
                 }
+        }
+
+        public function totalFIlas()
+        {
+                $num_filas = $this->conn->query("select * from tasks");
+                if (!$num_filas) {
+                        echo "<h1>error en la conexión</h1>";
+                        exit();
+                }
+                $tmp = count($num_filas->fetchAll(PDO::FETCH_ASSOC));
+                return $tmp > 0 ? $tmp : 0;
         }
 }
 
