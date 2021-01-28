@@ -1,29 +1,30 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-        <meta charset="UTF-8">
-        <title>fetch</title>
-</head>
-<body>
 <?php
-function consultar()
+function segunda_forma()
 {
-        if (isset($_POST["nombre"], $_POST["apellido"])) {
-                $tmp = json_encode($_POST);
-                echo "<script>const data = $tmp</script>";
-        } else {
-                 ?>
-<form action="<?php $_SERVER["PHP_SELF"]; ?>" method="POST">
-nombre: <input type="text" name="nombre"> <br>
-apellido: <input type="text" name="apellido"><br>
-<button>enviar</button>
+        $arr = [];
+        $dsn = "mysql:host=mysql;dbname=dwes;charset=utf8";
+        $username = "root";
+        $password = "1234";
 
-<?php
+        try {
+                $connection = new PDO($dsn, $username, $password);
+        } catch (PDOException $e) {
+                echo json_encode([
+                        "mensaje" => "ocurrio algo",
+                        "error" => $e->getMessage(),
+                ]);
+                exit();
         }
+
+        $tmp = $connection->query("select * from tasks");
+
+        while ($a = $tmp->fetch(PDO::FETCH_ASSOC)) {
+                $arr[] = $a;
+        }
+
+        //end of the connection
+        echo json_encode($arr);
+        unset($connection);
 }
-consultar();
+segunda_forma();
 ?>
-<script src="app.js"></script>
-</form>
-</body>
-</html>
