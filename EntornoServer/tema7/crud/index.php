@@ -1,71 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>brawl CRUD CRUD</title>
 </head>
 <body>
        <?php
        include_once "conecta_db.php";
        $brawl = conectaBD::singleton("dwes");
-       $tmp_pdo = $brawl->ver_brawl();
-
-       // ya funciona esa kk de singleton :, falta implementar el CRUD);
-       if ($tmp_pdo === null) {
-               echo "<h1>Hubo un error con la consulta!!!</h1>";
-               exit();
-       } else {
-               $arr = $tmp_pdo->fetchAll(PDO::FETCH_ASSOC);
-               foreach ($arr as $v) {
-                       echo "<p><strong>Id: </strong>" . $v["id"] . "</p>";
-                       echo "<p><strong>Nombre: </strong>" .
-                               $v["nombre"] .
-                               "</p>";
-                       echo "<p><strong>Numero de start power: </strong>" .
-                               $v["num_start_power"] .
-                               "</p>";
-                       echo "<p><strong> numero de skins: </strong>" .
-                               $v["num_skins"] .
-                               "</p>";
-
-                       echo "<hr>";
-               }
+       $brawl->ver_brawl();
+       if (isset($_GET["borrar"])) {
+               $brawl->borrar_brawl($_GET["id"], $_GET["nombre"]);
        }
-
-/*switch ($opcion) {
-               case 1:
-                       $tmp_pdo = $brawl->ver_brawl();
-
-                       if ($tmp_pdo === null) {
-                               echo "<h1>Hubo un error con la consulta!!!</h1>";
-                               exit();
-                       } else {
-                               $arr = $tmp_pdo->fetchAll(PDO::FETCH_ASSOC);
-                               foreach ($arr as $v) {
-                                       echo "<p></strong>Id: </strong>" .
-                                               $v["id"] .
-                                               "</p>";
-                                       echo "<p><strong>Nombre: </strong>" .
-                                               $v["nombre"] .
-                                               "</p>";
-                                       echo "<p><strong>Numero de start power: </strong>" .
-                                               $v["num_start_power"] .
-                                               "</p>";
-                                       echo "<p><strong> numero de skins: </strong>" .
-                                               $v["num_skins"] .
-                                               "</p>";
-
-                                       echo "<hr>";
-                               }
-                       }
-                       break;
-               case 2:
-                       break;
-               case 3:
-                       break;
-               case 4:
-                       break;
-       }*/
-?> 
+       echo "<br>";
+       ?>
+                <form action="<?php $_SERVER["PHP_SELF"]; ?>" method="GET">
+                        <input type="text" name="id" placeholder="id">
+                        <input type="text" name="nombre" placeholder="nombre">
+                        <input type="text" name="start" placeholder="numero start powers"> 
+                        <input type="nombre" name="skins" placeholder="numero skins">
+                  <br>
+                  <br>
+                        <input type="submit" name="actualizar" value="actualizar">
+                        <input type="submit" name="borrar" value="borrar">
+                        <input type="submit" name="insertar" value="insertar">
+                </form>
 </body>
 </html>
