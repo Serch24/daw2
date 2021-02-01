@@ -35,6 +35,7 @@ class conectaBD
                 return self::$instancia;
         }
 
+        /*Falta arreglar los campos en blanco y manejar los errores, el crud ya está hecho*/
         public function insertar_brawl($nombre, $num_start, $num_skin)
         {
                 $nombre_mejorado = filtrado($nombre);
@@ -63,16 +64,16 @@ class conectaBD
 
                 try {
                         $tmp = $this->conn->prepare(
-                                "UPDATE brawl set nombre = :nombre,num_start_power = :start, num_skins = :skins where id = :id"
+                                "UPDATE brawl set nombre=:nombre ,num_start_power=:start, num_skins=:skins where id=:id_m"
                         );
                         $tmp->execute([
-                                ":id" => $id_mejorado,
                                 ":nombre" => $nombre_mejorado,
-                                ":num_start_power" => $start_mejorado,
+                                ":start" => $start_mejorado,
                                 ":skins" => $skins_mejorado,
+                                ":id_m" => $id_mejorado,
                         ]);
                 } catch (PDOException $e) {
-                        echo "Ocurrió algo";
+                        echo "Ocurrió algo" . $e->getLine();
                 }
         }
 
@@ -114,13 +115,13 @@ class conectaBD
          <th>numero de skins</th>
       </tr>
 EOF;
-                        foreach ($tmp->fetchAll(PDO::FETCH_ASSOC) as $v) {
+                        foreach ($tmp->fetchAll(PDO::FETCH_OBJ) as $v) {
                                 echo <<<EOF
       <tr>
-         <td>{$v["id"]}</td>
-         <td >{$v["nombre"]}</td>
-         <td >{$v["num_start_power"]}</td>
-         <td >{$v["num_skins"]}</td>
+         <td>{$v->id}</td>
+         <td >{$v->nombre}</td>
+         <td >{$v->num_start_power}</td>
+         <td >{$v->num_skins}</td>
       </tr>
 EOF;
                         }

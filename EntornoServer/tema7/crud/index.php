@@ -31,7 +31,7 @@
                        $_GET["start"],
                        $_GET["skins"]
                );
-               /*echo "<h1>Se ha borrado correctamente el brawler</h1>";*/
+               /*echo "<h1>Se ha actualizado correctamente el brawler</h1>";*/
                header("Location:/");
        }
        echo "<br>";
@@ -40,7 +40,7 @@
                         <input type="number" name="id" placeholder="id">
                         <input type="text" name="nombre" placeholder="nombre">
                         <input type="number" name="start" placeholder="numero start powers"> 
-                        <input type="nombre" name="skins" placeholder="numero skins">
+                        <input type="number" name="skins" placeholder="numero skins">
                   <br>
                   <br>
                         <input type="submit" name="actualizar" value="actualizar">
