@@ -49,13 +49,31 @@ class conectaBD
                         ":start" => $start,
                         ":skin" => $skins,
                 ]);
-                echo "<h1>Se ha insertado un registro con éxito</h1>";
         }
         public function actualizar_brawl(
+                $id = null,
                 $nombre = null,
                 $num_start = null,
                 $num_skin = null
         ) {
+                $nombre_mejorado = filtrado($nombre);
+                $id_mejorado = filtrado($id);
+                $start_mejorado = filtrado($num_start);
+                $skins_mejorado = filtrado($num_skin);
+
+                try {
+                        $tmp = $this->conn->prepare(
+                                "UPDATE brawl set nombre = :nombre,num_start_power = :start, num_skins = :skins where id = :id"
+                        );
+                        $tmp->execute([
+                                ":id" => $id_mejorado,
+                                ":nombre" => $nombre_mejorado,
+                                ":num_start_power" => $start_mejorado,
+                                ":skins" => $skins_mejorado,
+                        ]);
+                } catch (PDOException $e) {
+                        echo "Ocurrió algo";
+                }
         }
 
         public function borrar_brawl($id, $nombre)
@@ -75,7 +93,6 @@ class conectaBD
                         echo "<h1>Ocurrió un error</h1>";
                         return false;
                 }
-                echo "<h1>Borrado exitoso</h1>";
         }
 
         public function ver_brawl()

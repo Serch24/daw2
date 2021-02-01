@@ -4,4 +4,4 @@ EntornoCliente/socket/node_modules*
 laravel_pruebas
 lasBasesDeDatos/
 docker-compose.yml
-.swp
+*.swp
