@@ -6,6 +6,7 @@ set tabstop=3
 set expandtab
 set smartindent
 set termguicolors
+set mouse=a
 set nu
 set rnu
 set complete+=t
@@ -29,9 +30,12 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install()} }
 Plug 'preservim/nerdcommenter'
 Plug 'itchyny/lightline.vim'
 Plug 'mattn/emmet-vim'
+Plug 'cohama/lexima.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'ryanoasis/vim-devicons'
+Plug 'mhinz/vim-signify'
 call plug#end()
 
 "" Para colorear el nerdtree :) 
@@ -63,6 +67,9 @@ call NERDTreeHighlightFile('bashprofile', 'Gray', 'none', '#686868', '#151515')
 autocmd VimEnter * NERDTree | wincmd p
 let NERDTreeShowHidden=1
 
+"" colores
+    let g:Hexokinase_highlighters = ['foregroundfull']
+
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
     \ quit | endif
@@ -76,6 +83,9 @@ command! -nargs=0 Sw wq !sudo tee % > /dev/null
 "" indentado de lineas
 let g:indentLine_char = 'x'
 
+"" git
+set updatetime=100
+
 "" prettier
 let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
@@ -88,7 +98,7 @@ au InsertLeave *.md CocCommand markdownlint.fixAll
 "" mapeos
 map <c-t> <esc>:tabnew<cr>                                                      
 map <c-e> <esc>:tabnext<cr>                                                     
-nnoremap <space> zz <esc>:tabclose<cr>                                                    
+map <c-w> <esc>:tabclose<cr>                                                     
 map <C-n> :NERDTreeToggle<CR>
 "" Con esto puedo comentar varias lineas :D
 map <C-a> <plug>NERDCommenterMinimal<CR>
