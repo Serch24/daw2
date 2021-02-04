@@ -106,5 +106,20 @@ A.-->
 
 ## Exersices
 
-30.1 Complete the sentences with work, job or career.
+* Have you ever do this kind of job before?
 
+* No,  this kind of job is completely new for me.
+
+* Why have you been interested of it?
+
+* falta
+
+* What did interest you the most about the job?
+
+* Oh, well
+
+* What did you do in your previous job?
+
+* falta
+
+* why did you leave?
