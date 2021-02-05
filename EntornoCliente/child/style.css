@@ -1,0 +1,17 @@
+table {
+  width: 100%;
+}
+table tr td {
+  border: 1px solid black;
+  font-size: 1.3rem;
+  text-align: center;
+}
+table tr th {
+  border: 1px solid black;
+}
+table tr .grande {
+  font-size: 2rem;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */
