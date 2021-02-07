@@ -1,0 +1,22 @@
+* {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+}
+.container {
+        height: 80vh;
+        width: 95vw;
+        margin: auto;
+        /*background-color: skyblue;*/
+}
+.numeros {
+        background-color: blue;
+        display: inline-block;
+        width: 2px;
+        margin: 0 2px;
+}
+.new {
+        width: 300px;
+        margin: auto;
+        display: block;
+}

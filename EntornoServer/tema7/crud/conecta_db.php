@@ -6,7 +6,7 @@ class conectaBD
         private static $instancia;
         private function __construct($database = "test")
         {
-                $dsn = "mysql:host=mysql;dbname=$database;charset=utf8";
+                $dsn = "mysql:host=localhost;dbname=$database;charset=utf8";
                 try {
                         $this->conn = new PDO($dsn, "sergio", "1234", [
                                 PDO::ATTR_PERSISTENT => true,
@@ -38,18 +38,25 @@ class conectaBD
         /*Falta arreglar los campos en blanco y manejar los errores, el crud ya está hecho*/
         public function insertar_brawl($nombre, $num_start, $num_skin)
         {
-                $nombre_mejorado = filtrado($nombre);
-                $start = filtrado($num_start);
-                $skins = filtrado($num_skin);
+                if (esta_vacio([$nombre, $num_start, $num_skin])) {
+                        echo "<h1>Hay campos en blanco</h1>";
+                } else {
+                        $nombre_mejorado = filtrado($nombre);
+                        $start = filtrado($num_start);
+                        $skins = filtrado($num_skin);
 
-                $tmp = $this->conn->prepare(
-                        "insert into brawl (nombre,num_start_power,num_skins) values (:nombre, :start, :skin)"
-                );
-                $tmp->execute([
-                        ":nombre" => $nombre_mejorado,
-                        ":start" => $start,
-                        ":skin" => $skins,
-                ]);
+                        $tmp = $this->conn->prepare(
+                                "insert into brawl (nombre,num_start_power,num_skins) values (:nombre, :start, :skin)"
+                        );
+                        $tmp->execute([
+                                ":nombre" => $nombre_mejorado,
+                                ":start" => $start,
+                                ":skin" => $skins,
+                        ]);
+                        echo $tmp->rowCount() > 0
+                                ? "<h1>Se ha incertado el brawler correctamente</h1>"
+                                : "<h1>No se incertó ningún brawler</h1>";
+                }
         }
         public function actualizar_brawl(
                 $id = null,
@@ -57,42 +64,55 @@ class conectaBD
                 $num_start = null,
                 $num_skin = null
         ) {
-                $nombre_mejorado = filtrado($nombre);
-                $id_mejorado = filtrado($id);
-                $start_mejorado = filtrado($num_start);
-                $skins_mejorado = filtrado($num_skin);
+                if (esta_vacio([$id, $nombre, $num_start, $num_skin])) {
+                        echo "<h1>Hay campos vacios</h1>";
+                } else {
+                        $nombre_mejorado = filtrado($nombre);
+                        $id_mejorado = filtrado($id);
+                        $start_mejorado = filtrado($num_start);
+                        $skins_mejorado = filtrado($num_skin);
 
-                try {
-                        $tmp = $this->conn->prepare(
-                                "UPDATE brawl set nombre=:nombre ,num_start_power=:start, num_skins=:skins where id=:id_m"
-                        );
-                        $tmp->execute([
-                                ":nombre" => $nombre_mejorado,
-                                ":start" => $start_mejorado,
-                                ":skins" => $skins_mejorado,
-                                ":id_m" => $id_mejorado,
-                        ]);
-                } catch (PDOException $e) {
-                        echo "Ocurrió algo" . $e->getLine();
+                        try {
+                                $tmp = $this->conn->prepare(
+                                        "UPDATE brawl set nombre=:nombre ,num_start_power=:start, num_skins=:skins where id=:id_m"
+                                );
+                                $tmp->execute([
+                                        ":nombre" => $nombre_mejorado,
+                                        ":start" => $start_mejorado,
+                                        ":skins" => $skins_mejorado,
+                                        ":id_m" => $id_mejorado,
+                                ]);
+                                echo $tmp->rowCount() > 0
+                                        ? "<h1>Se ha actualizado el brawler correctamente</h1>"
+                                        : "<h1>No se actualizó ningún brawler</h1>";
+                        } catch (PDOException $e) {
+                                echo "Ocurrió algo" . $e->getLine();
+                        }
                 }
         }
 
         public function borrar_brawl($id, $nombre)
         {
-                $id_mejorado = filtrado($id);
-                $nombre_mejorado = filtrado($nombre);
+                if (esta_vacio([$id, $nombre])) {
+                        echo "<h1>Hay campos en blanco</h1>";
+                } else {
+                        $id_mejorado = filtrado($id);
+                        $nombre_mejorado = filtrado($nombre);
 
-                try {
-                        $tmp = $this->conn->prepare(
-                                "DELETE FROM brawl WHERE id = :id and nombre = :nombre"
-                        );
-                        $tmp->execute([
-                                ":id" => $id_mejorado,
-                                ":nombre" => $nombre_mejorado,
-                        ]);
-                } catch (PDOException $e) {
-                        echo "<h1>Ocurrió un error</h1>";
-                        return false;
+                        try {
+                                $tmp = $this->conn->prepare(
+                                        "DELETE FROM brawl WHERE id = :id and nombre = :nombre"
+                                );
+                                $tmp->execute([
+                                        ":id" => $id_mejorado,
+                                        ":nombre" => $nombre_mejorado,
+                                ]);
+                                echo $tmp->rowCount() > 0
+                                        ? "<h1>Se ha borrado el brawler correctamente</h1>"
+                                        : "<h1>No se borró ningún brawler</h1>";
+                        } catch (PDOException $e) {
+                                echo "<h1>Ocurrió un error al borrar</h1>";
+                        }
                 }
         }
 
@@ -105,7 +125,7 @@ class conectaBD
                 if ($tmp->rowCount() === 0) {
                         echo "No hay datos que mostrar";
                 } else {
-                        echo "<table style='width: 26%;' border='1'>";
+                        echo "<table>";
                         echo "<tbody>";
                         echo <<<EOF
       <tr>
