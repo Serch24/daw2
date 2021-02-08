@@ -36,16 +36,22 @@ class conectaBD
 
         public function comprobar($usuario, $passwd)
         {
+                /*hash usado sha512*/
                 $pass_hasheada = hash("sha512", $passwd);
-                $tmp = $this->conn->query(
-                        "select * from usuarios where nombre_usuario = '$usuario' and passwd_hash = '$pass_hasheada'"
+
+                $tmp = $this->conn->prepare(
+                        "select * from usuarios where login = :usuario and clave_hash = :pass"
                 );
+                $tmp->execute([
+                        ":usuario" => $usuario,
+                        ":pass" => $pass_hasheada,
+                ]);
+
                 if ($tmp->rowCount() > 0) {
-                        $nombre = $tmp->fetchAll(PDO::FETCH_ASSOC);
-                        echo "<h1>Bienvenido {$nombre[0]["nombre_usuario"]}</h>";
+                        $nombre = $tmp->fetch(PDO::FETCH_ASSOC);
+                        return $nombre["login"];
                 } else {
-                        echo "<h1>Permiso denegado</h1>";
-                        exit();
+                        return false;
                 }
         }
 }
