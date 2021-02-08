@@ -1,12 +1,12 @@
 const princesa = [];
 let mario = [];
 let wall = [];
-const new_grid = [
+/*const new_grid = [
         ["-", "-", "-", "-"],
-        ["p", "w", "m", "-"],
+        ["p", "-", "m", "-"],
         ["-", "-", "-", "-"],
         ["-", "-", "-", "-"],
-];
+];*/
 
 function crear_grid(size = 3, m = [1, 1], p = [0, 0]) {
         let gridd = [];
@@ -46,7 +46,7 @@ async function princess(arr) {
         console.log(copia);
         /*mario[0] != princesa[0] ||*/
         while (mario[1] != princesa[1] || mario[0] != princesa[0]) {
-                await timer(500);
+                await timer(1000);
                 /*Si estan en el eje Y los dos solo se moverá mario en el eje X */
                 if (
                         (princesa[0] === mario[0] && princesa[1] > mario[1]) ||
@@ -124,5 +124,4 @@ async function princess(arr) {
                 }
         }
 }
-/*princess(crear_grid(11, [0, 1], [2, 10]));*/
-princess(new_grid);
+princess(crear_grid(11, [6, 10], [0, 1]));

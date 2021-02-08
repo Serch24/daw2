@@ -6,7 +6,7 @@ class conectaBD
         private static $instancia;
         private function __construct($database = "test")
         {
-                $dsn = "mysql:host=localhost;dbname=$database;charset=utf8";
+                $dsn = "mysql:host=mysql;dbname=$database;charset=utf8";
                 try {
                         $this->conn = new PDO($dsn, "sergio", "1234", [
                                 PDO::ATTR_PERSISTENT => true,
@@ -54,8 +54,8 @@ class conectaBD
                                 ":skin" => $skins,
                         ]);
                         echo $tmp->rowCount() > 0
-                                ? "<h1>Se ha incertado el brawler correctamente</h1>"
-                                : "<h1>No se incertó ningún brawler</h1>";
+                                ? "<h1>Se ha insertado el brawler correctamente</h1>"
+                                : "<h1>No se insertó ningún brawler</h1>";
                 }
         }
         public function actualizar_brawl(
