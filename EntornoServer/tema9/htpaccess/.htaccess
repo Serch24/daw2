@@ -1,0 +1,4 @@
+AuthName "Contenido restringido"
+AuthType Basic
+AuthUserFile /var/www/html/usuario
+require valid-user

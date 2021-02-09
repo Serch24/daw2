@@ -4,7 +4,7 @@ services:
     ports:
       - 8001:80
     volumes:
-      - ../tema9/passwd_hash/:/var/www/html
+      - ../tema9/htpaccess/:/var/www/html
     links:
       - mysql
   mysql:
