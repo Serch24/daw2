@@ -1,22 +1,12 @@
-var base = parseInt(prompt("dame la base"));
-var exponente = parseInt(prompt("dame el exponente"));
-var a = parseInt(prompt("Hola que haces"));
-var b = new Date();
+let re = /^s.{4}o$/i;
+let re2 = /^\s.{2}io$/i;
+let re3 = /(^Sergio|[0-3]{2}).{2}re$/g;
+let re4 = /[^0-5]{2}$/i;
+let re5 = /\.{3}ho$/i;
+let re6 = /^([0-9]|[a-z]){2,3}$/i;
+let re7 = /sergio?/i;
 
-//var total = (uno, dos) => uno * dos;
-//var potencia = (a, b) => b == 0 ? 1 : a * (potencia(a, b - 1));
-function potencia(a, b) {
-    if (a == 0) {
-        return 0;
-    } else if (b == 0) {
-        return 1;
-    } else {
-        return a * (potencia(a, b - 1));
-    }
-}
-//var total3 = (a) => a == 1 ? 1 : a * total3(a - 1);
 
-//document.write(`<h1>Multiplicación: ${total(uno,dos)}</h1> <br>`);
-document.write(`<h1>potencia: ${potencia(base,exponente)}<h1> <br>`);
-//document.write(`<h1>factorial de ${uno}! es : ${total3(uno)}<h1><br>`);
-//document.write(`<h1>factorial de ${dos}! es : ${total3(dos)}<h1>`);
+
+let texto = "hola";
+console.log(re7.test(texto))

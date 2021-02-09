@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <meta
+                        content="text/html; charset=UTF-8"
+                        http-equiv="content-type"
+                />
+                <title>Objeto movil</title>
+                <script>
+                        // Definición del objeto Tarifa
+                        function Tarifa(txtpais, numporinicio, numporminuto) {
+                                // Definición de propiedades
+                                this.Pais = txtpais;
+                                this.Precio_establecimiento = numporinicio;
+                                this.Precio_minuto = numporminuto;
+                        }
+                        // Definición del objeto Llamada
+                        function Llamada(
+                                txtpais2,
+                                dfecha,
+                                txttelefono,
+                                numtiempo
+                        ) {
+                                // Definición de propiedades
+                                this.Pais = txtpais2;
+                                this.Fecha = dfecha;
+                                this.Telefono = txttelefono;
+                                this.Tiempo = numtiempo;
+                        }
+                        // Definición del objeto Movil
+                        function Movil(
+                                txtmarca,
+                                numancho,
+                                numalto,
+                                atarifas,
+                                allamadas
+                        ) {
+                                // Definición de propiedades
+                                this.Marca = txtmarca;
+                                this.Ancho = numancho;
+                                this.Alto = numalto;
+                                this.Tarifas = atarifas;
+                                this.Llamadas = allamadas;
+                                // Definición de métodos
+                                this.resolucion = fnresolucion;
+                                this.importe_llamada = fnimporte_llamada;
+                                this.llamada_mas_cara = fncara;
+                                this.pais_mas_llamado = fnpais;
+                                this.ordenada = fnordenada;
+                                this.factura = fnfactura;
+                        }
+                        // Definición de funciones - métodos
+                        function fnresolucion() {
+                                with (this) {
+                                        return Alto * Ancho;
+                                }
+                        }
+                        function fnimporte_llamada(la_llamada) {
+                                with (this) {
+                                        var importe = 0;
+                                        for (
+                                                var i = 0;
+                                                i < Tarifas.length;
+                                                i++
+                                        ) {
+                                                if (
+                                                        la_llamada.Pais ==
+                                                        Tarifas[i].Pais
+                                                ) {
+                                                        importe =
+                                                                Tarifas[i]
+                                                                        .Precio_establecimiento +
+                                                                (Tarifas[i]
+                                                                        .Precio_minuto *
+                                                                        la_llamada.Tiempo) /
+                                                                        60;
+                                                }
+                                        }
+                                        return importe;
+                                }
+                        }
+                        function fncara() {
+                                with (this) {
+                                        var ind = 0;
+                                        var mas = 0;
+                                        var importe = 0;
+                                        for (
+                                                var i = 0;
+                                                i < Llamadas.length;
+                                                i++
+                                        ) {
+                                                importe = importe_llamada(
+                                                        Llamadas[i]
+                                                );
+                                                if (importe > mas) {
+                                                        mas = importe;
+                                                        ind = i;
+                                                }
+                                        }
+                                        for (var k in Llamadas[ind]) {
+                                                document.write(
+                                                        k +
+                                                                ".- " +
+                                                                Llamadas[ind][
+                                                                        k
+                                                                ] +
+                                                                "  "
+                                                );
+                                        }
+                                }
+                        }
+                        function fnpais() {
+                                with (this) {
+                                        var i = 0;
+                                        var j = 0;
+                                        var paisaux = "";
+                                        var mas = 0;
+                                        var paismas = new Array();
+                                        var encontrado = "no";
+                                        for (i = 0; i < Llamadas.length; i++) {
+                                                encontrado = "no";
+                                                for (
+                                                        j = 0;
+                                                        j < paismas.length;
+                                                        j++
+                                                ) {
+                                                        if (
+                                                                Llamadas[i]
+                                                                        .Pais ==
+                                                                paismas[j][0]
+                                                        ) {
+                                                                paismas[j][1]++;
+                                                                encontrado =
+                                                                        "si";
+                                                        }
+                                                }
+                                                if (encontrado == "no") {
+                                                        paismas[
+                                                                j
+                                                        ] = new Array();
+                                                        paismas[j][0] =
+                                                                Llamadas[
+                                                                        i
+                                                                ].Pais;
+                                                        paismas[j][1] = 1;
+                                                }
+                                        }
+                                        for (i = 0; i < paismas.length; i++) {
+                                                if (paismas[i][1] > mas) {
+                                                        paisaux = paismas[i][0];
+                                                        mas = paismas[i][1];
+                                                }
+                                        }
+                                        return paisaux;
+                                }
+                        }
+                        function fnordenada() {
+                                with (this) {
+                                        var tabla_aux = Llamadas;
+                                        var llamada_aux;
+                                        for (
+                                                var i = 0;
+                                                i < tabla_aux.length - 1;
+                                                i++
+                                        ) {
+                                                for (
+                                                        var j = i + 1;
+                                                        j < tabla_aux.length;
+                                                        j++
+                                                ) {
+                                                        if (
+                                                                tabla_aux[
+                                                                        i
+                                                                ].Fecha.getTime() >
+                                                                tabla_aux[
+                                                                        j
+                                                                ].Fecha.getTime()
+                                                        ) {
+                                                                llamada_aux =
+                                                                        tabla_aux[
+                                                                                i
+                                                                        ];
+                                                                tabla_aux[i] =
+                                                                        tabla_aux[
+                                                                                j
+                                                                        ];
+                                                                tabla_aux[
+                                                                        j
+                                                                ] = llamada_aux;
+                                                        }
+                                                }
+                                        }
+                                        return tabla_aux;
+                                }
+                        }
+                        function fnfactura() {
+                                with (this) {
+                                        var tabla;
+                                        tabla = ordenada();
+                                        for (var i = 0; i < tabla.length; i++) {
+                                                document.write(
+                                                        tabla[
+                                                                i
+                                                        ].Fecha.getFullYear() +
+                                                                "-"
+                                                );
+                                                document.write(
+                                                        tabla[
+                                                                i
+                                                        ].Fecha.getMonth() +
+                                                                1 +
+                                                                "-"
+                                                );
+                                                document.write(
+                                                        tabla[
+                                                                i
+                                                        ].Fecha.getDate() +
+                                                                " : "
+                                                );
+                                                document.write(
+                                                        tabla[
+                                                                i
+                                                        ].Fecha.getHours() + "-"
+                                                );
+                                                document.write(
+                                                        tabla[
+                                                                i
+                                                        ].Fecha.getMinutes() +
+                                                                "-"
+                                                );
+                                                document.write(
+                                                        tabla[
+                                                                i
+                                                        ].Fecha.getSeconds() +
+                                                                " --- "
+                                                );
+                                                document.write(
+                                                        tabla[i].Telefono +
+                                                                " --- "
+                                                );
+                                                document.write(
+                                                        tabla[i].Tiempo +
+                                                                " --- "
+                                                );
+                                                document.write(
+                                                        importe_llamada(
+                                                                tabla[i]
+                                                        )
+                                                );
+                                                document.write("<br><br>");
+                                        }
+                                }
+                        }
+                        // funciones
+                        function pide_pais() {
+                                var el_pais = "";
+                                var existe = "no";
+                                do {
+                                        el_pais = prompt(
+                                                "Pais de la llamada",
+                                                "España"
+                                        );
+                                        for (i = 0; i < t_tarifas.length; i++) {
+                                                if (
+                                                        el_pais ==
+                                                        t_tarifas[i].Pais
+                                                ) {
+                                                        existe = "si";
+                                                }
+                                        }
+                                } while (existe == "no");
+                                return el_pais;
+                        }
+                        function pide_fecha() {
+                                var fecha_hoy = new Date();
+                                var la_fecha;
+                                do {
+                                        var anio = parseInt(
+                                                prompt("Introduzca año", 2015)
+                                        );
+                                        do {
+                                                var mes = parseInt(
+                                                        prompt(
+                                                                "Introduzca mes",
+                                                                1
+                                                        )
+                                                );
+                                        } while (mes < 1 || mes > 12);
+                                        do {
+                                                var dia = parseInt(
+                                                        prompt(
+                                                                "Introduzca dia",
+                                                                1
+                                                        )
+                                                );
+                                        } while (dia < 1 || dia > 31);
+                                        do {
+                                                var hora = parseInt(
+                                                        prompt(
+                                                                "Introduzca hora",
+                                                                0
+                                                        )
+                                                );
+                                        } while (hora < 0 || hora > 23);
+                                        do {
+                                                var minu = parseInt(
+                                                        prompt(
+                                                                "Introduzca minutos",
+                                                                0
+                                                        )
+                                                );
+                                        } while (minu < 0 || minu > 59);
+                                        do {
+                                                var segu = parseInt(
+                                                        prompt(
+                                                                "Introduzca segundos",
+                                                                0
+                                                        )
+                                                );
+                                        } while (segu < 0 || segu > 59);
+                                        la_fecha = new Date(
+                                                anio,
+                                                mes - 1,
+                                                dia,
+                                                hora,
+                                                minu,
+                                                segu
+                                        );
+                                } while (
+                                        fecha_hoy.getTime() < la_fecha.getTime()
+                                );
+                                return la_fecha;
+                        }
+                        function pide_tfno() {
+                                //			var expre = new RegExp ("^([0-9]{3} )?[0-9]{9}$","g");
+                                var expre = /^([0-9]{3} )?[0-9]{9}$/;
+                                var telefono = "";
+                                do {
+                                        telefono = prompt(
+                                                "Num. teléfono",
+                                                "913170047"
+                                        );
+                                } while (!expre.test(telefono));
+                                return telefono;
+                        }
+                </script>
+        </head>
+        <body>
+                <script type="text/javascript">
+                        // Variables
+                        // Creación de una tabla con las tarifas
+                        var t_tarifas = new Array();
+                        var mi_pais;
+                        // Éstas no son estrictamente necesarias
+                        var mi_prinicio = 0;
+                        var mi_prminuto = 0;
+                        var repe = true;
+                        var i = 0;
+                        var j = 0;
+                        // Introducir tarifas (en una tabla)
+                        var numtar = parseInt(prompt("Numero de tarifas", 0));
+                        for (i = 0; i < numtar; i++) {
+                                do {
+                                        repe = false;
+                                        mi_pais = prompt(
+                                                "Pais a tarificar",
+                                                "España"
+                                        );
+                                        for (j = 0; j < t_tarifas.length; j++) {
+                                                if (
+                                                        mi_pais ===
+                                                        t_tarifas[j].Pais
+                                                ) {
+                                                        repe = true;
+                                                        j = t_tarifas.length; //no moral pero efectivo
+                                                }
+                                        }
+                                } while (repe);
+                                mi_prinicio = parseFloat(
+                                        prompt(
+                                                "Precio establecimiento llamada",
+                                                0
+                                        )
+                                );
+                                mi_prminuto = parseFloat(
+                                        prompt("Precio minuto llamada", 0)
+                                );
+                                t_tarifas[i] = new Tarifa(
+                                        mi_pais,
+                                        mi_prinicio,
+                                        mi_prminuto
+                                );
+                        }
+                        // Introducir llamadas (en una tabla)
+                        var t_llamadas = new Array();
+                        j = 0;
+                        var mas = "si";
+                        do {
+                                t_llamadas[j] = new Llamada();
+                                t_llamadas[j].Pais = pide_pais();
+                                t_llamadas[j].Fecha = pide_fecha();
+                                t_llamadas[j].Telefono = pide_tfno();
+                                t_llamadas[j].Tiempo = parseInt(
+                                        prompt(
+                                                "Tiempo de la llamada en segundos",
+                                                0
+                                        )
+                                );
+                                j++;
+                                mas = prompt("Más llamadas", "si");
+                        } while (mas == "si");
+                        // Creación del objeto movil y visualización de datos
+                        var mi_marca = prompt(
+                                "Marca y modelo del móvil",
+                                "Acme"
+                        );
+                        var mi_ancho = parseInt(
+                                prompt("Ancho de pantalla", 300)
+                        );
+                        var mi_alto = parseInt(prompt("Alto de pantalla", 500));
+                        var mi_movil = new Movil(
+                                mi_marca,
+                                mi_ancho,
+                                mi_alto,
+                                t_tarifas,
+                                t_llamadas
+                        );
+                        // Visualización de datos
+                        with (mi_movil) {
+                                document.write("Número de pixeles: ");
+                                document.write(resolucion());
+                                document.write("<br><br>");
+
+                                document.write("Llamada más cara: ");
+                                llamada_mas_cara();
+                                document.write("<br><br>");
+
+                                document.write("Pais con más llamadas: ");
+                                document.write(pais_mas_llamado());
+                                document.write("<br><br>");
+
+                                factura();
+                        }
+                </script>
+        </body>
+</html>
