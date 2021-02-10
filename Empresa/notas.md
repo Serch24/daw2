@@ -42,6 +42,8 @@ Pedido optimo (12.a)
 
 ## Tarea para casa 8 de feb del 2020
 
+- Update(F)
+
 ### Enunciado
 
 - A lo largo de un año una empresa ha comprado y vendido 8100 unidades de su producto. El coste de gestionar cada pedido es de 18 euros y el coste de tener una unidad almacenada durante 1 año es de 4 euros. El proveedor tarda 8 dias en servir el pedido. No hay stock de seguridad y la empresa trabaja 360 dias al año.
@@ -58,4 +60,24 @@ Pedido optimo (12.a)
 
 ## -----------------------
 
+## Examen fol examen 11 de marzo
+
+### tema 5
+
+- Empresaio
+- Sociedad limitada (SLFS,SLNE)
+- S.A
+- Sociedad laboral
+- sociedad Cooperativa
+- Trámite constitución
+- Trámite puesta en marcha
+
+### tema6/7 (Plan de producción)
+
+- Plan de producción
+- Aprovisionamiento
+- compras
+- Almacenamiento
+- Gestión inventario (Pedido optimo)->Fotocopia
+- Costes fijos y variables
 
