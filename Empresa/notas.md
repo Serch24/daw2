@@ -78,6 +78,19 @@ Pedido optimo (12.a)
 - Aprovisionamiento
 - compras
 - Almacenamiento
-- Gestión inventario (Pedido optimo)->Fotocopia
+- Gestión inventario (Pedido optimo)-> Fotocopia
 - Costes fijos y variables
 
+## enunciado de tarea
+
+> CF= 3.000.000 euros al año
+> CV = 2500 euros por unidad
+> Pv = 4000 euros al año
+
+- Una empresa fabrica algo
+
+a.) Calcular el umbral de rentabilidad y el nivel de ingresos para el mismo.
+
+b.) Si se ha previsto un nivel de producción y ventas de 3500 unidades, calcula el resultado.
+
+c.) Calcula el resultado si el nivel de producción y ventas fuera de 600 unidades.

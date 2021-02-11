@@ -32,17 +32,17 @@
 
 ## 27.1
 
-* 1) a
+-    1. a
 
-* 2) c
+-    2. c
 
-* 3.) d
+- 3.) d
 
-* 4.) f
+- 4.) f
 
-* 5.) b
+- 5.) b
 
-* 6.) e
+- 6.) e
 
 ## 27.2
 
@@ -106,25 +106,34 @@ A.-->
 
 ## Exersices
 
-* Have you ever do this kind of job before?
+- Have you ever do this kind of job before?
 
-* No,  this kind of job is completely new for me.
+- No, this kind of job is completely new for me.
 
-* Why have you been interested of it?
+- Why have you been interested of it?
 
-* falta
+- falta
 
-* What did interest you the most about the job?
+- What did interest you the most about the job?
 
-* Oh, well
+- Oh, well
 
-* What did you do in your previous job?
+- What did you do in your previous job?
 
-* falta
+- falta
 
-* why did you leave?
+- why did you leave?
 
-## questions
+## preguntas
 
-* It``
+A: Good morning sr, someone has accessed in my account because my bank app sent me an alert!.
 
+B: Let's see... Can you access in/into your account?
+
+A: No, i can't.
+
+B: When was the last time you have accessed to the account?
+
+A: Yesterday at nigth.
+
+B: ok, where're going to block your account righ now

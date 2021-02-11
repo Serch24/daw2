@@ -20,8 +20,8 @@ set laststatus=2
 set noshowmode
 set incsearch
 set hlsearch
-colorscheme koehler 
-""color darkblue 
+colorscheme koehler
+""color darkblue
 
 call plug#begin()
 Plug 'preservim/nerdtree'
@@ -32,13 +32,16 @@ Plug 'itchyny/lightline.vim'
 Plug 'mattn/emmet-vim'
 Plug 'cohama/lexima.vim'
 Plug 'Yggdroot/indentLine'
+Plug 'terroo/vim-simple-emoji'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'honza/vim-snippets'
 Plug 'ryanoasis/vim-devicons'
 Plug 'mhinz/vim-signify'
 call plug#end()
 
-"" Para colorear el nerdtree :) 
+"" Para colorear el nerdtree :)
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
  exec 'autocmd FileType nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
  exec 'autocmd FileType nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
@@ -69,7 +72,6 @@ let NERDTreeShowHidden=1
 
 "" colores
     let g:Hexokinase_highlighters = ['foregroundfull']
-
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
     \ quit | endif
@@ -117,4 +119,3 @@ function! s:check_back_space() abort
 endfunction
 
 let g:coc_snippet_next = '<tab>'
-
