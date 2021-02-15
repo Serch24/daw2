@@ -2,7 +2,7 @@ syntax on
 
 set encoding=UTF-8
 set cursorline
-set tabstop=3 
+set tabstop=3
 set expandtab
 set smartindent
 set termguicolors
@@ -13,7 +13,7 @@ set complete+=t
 set joinspaces
 set nobackup
 set nowritebackup
-set wrap 
+set wrap
 set confirm
 set cmdheight=2
 set laststatus=2
@@ -21,7 +21,7 @@ set noshowmode
 set incsearch
 set hlsearch
 colorscheme koehler
-""color darkblue
+color slate 
 
 call plug#begin()
 Plug 'preservim/nerdtree'
@@ -31,6 +31,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'itchyny/lightline.vim'
 Plug 'mattn/emmet-vim'
 Plug 'cohama/lexima.vim'
+Plug 'matze/vim-move'
 Plug 'Yggdroot/indentLine'
 Plug 'terroo/vim-simple-emoji'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
@@ -66,6 +67,10 @@ call NERDTreeHighlightFile('gitignore', 'Gray', 'none', '#686868', '#151515')
 call NERDTreeHighlightFile('bashrc', 'Gray', 'none', '#686868', '#151515')
 call NERDTreeHighlightFile('bashprofile', 'Gray', 'none', '#686868', '#151515')
 
+""emoji...
+let g:neosnippet#snippets_directory='~/.vim/neosnippets'
+
+
 "" nerdtree
 autocmd VimEnter * NERDTree | wincmd p
 let NERDTreeShowHidden=1
@@ -81,6 +86,9 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 
 ""alias para guardar con sudo vim
 command! -nargs=0 Sw wq !sudo tee % > /dev/null
+
+""mover seleccionado
+let g:move_key_modifier = 'C'
 
 "" indentado de lineas
 let g:indentLine_char = 'x'
