@@ -29,7 +29,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install()} }
 Plug 'preservim/nerdcommenter'
 Plug 'itchyny/lightline.vim'
+Plug 'mhinz/vim-startify'
 Plug 'mattn/emmet-vim'
+Plug 'luochen1990/rainbow'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npm install'  }
 Plug 'cohama/lexima.vim'
 Plug 'matze/vim-move'
 Plug 'Yggdroot/indentLine'
@@ -41,6 +44,9 @@ Plug 'honza/vim-snippets'
 Plug 'ryanoasis/vim-devicons'
 Plug 'mhinz/vim-signify'
 call plug#end()
+
+""parentheses
+let g:rainbow_active = 1
 
 "" Para colorear el nerdtree :)
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)

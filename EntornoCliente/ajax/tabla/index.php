@@ -1,11 +1,14 @@
 <?php
 if (isset($_GET["valor"])) {
         if (strcmp($_GET["valor"], "sergio") === 0) {
-                echo "sergio";
+                echo "Hola sergio :)";
         } else {
-                echo "Nope2";
+                echo "No existe ese nombre";
         }
+}
+if (isset($_GET["test"])) {
+        echo $_GET["test"];
 } else {
-        echo "nope";
+        echo "falló algo";
 }
 ?>
