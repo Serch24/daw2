@@ -1,4 +1,4 @@
-FROM php:8.0-apache 
+FROM serch24/phpini
 RUN apt-get update && apt-get install -y \
     libfreetype6-dev \
         libjpeg-dev \
@@ -7,5 +7,3 @@ RUN apt-get update && apt-get install -y \
         --with-freetype \
     && docker-php-ext-install gd \
     && docker-php-ext-enable gd
-
-COPY ./php.ini /usr/local/etc/php/conf.d/php.ini
