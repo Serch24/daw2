@@ -32,9 +32,9 @@
 
 ## 27.1
 
--    1. a
+- 1. a
 
--    2. c
+- 2. c
 
 - 3.) d
 
@@ -137,3 +137,60 @@ B: When was the last time you have accessed to the account?
 A: Yesterday at nigth.
 
 B: ok, where're going to block your account righ now
+
+<!---->
+
+## A
+
+1. d
+
+2. f
+
+3. h
+
+4. b
+
+5. g
+
+6. a
+
+7. c
+
+8. e
+
+## B
+
+1. Must
+
+2. should
+
+3. may
+
+4. may
+
+5. will
+
+6. must
+
+7. should
+
+8. may
+
+## C
+
+1. may
+
+2. you should study harder
+
+3. you must take your medicines.
+
+4. i
+
+5. im not sure, i think it will.
+
+6. may you answer my phone, please?
+
+7. How long will the fligh take?
+
+8. we should be arriving at 12:10
+

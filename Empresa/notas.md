@@ -94,3 +94,27 @@ a.) Calcular el umbral de rentabilidad y el nivel de ingresos para el mismo.
 b.) Si se ha previsto un nivel de producción y ventas de 3500 unidades, calcula el resultado.
 
 c.) Calcula el resultado si el nivel de producción y ventas fuera de 600 unidades.
+
+<!---->
+
+## Fuentes de finanzación
+
+- Propias(Propiedad de la empresa)
+  - externa
+    - Aportación de los socios
+    - Aportación de invesores
+      - Business Angels
+      - Sociedades de capital- riesgo
+  - Internas
+    - Autofinanciación
+      - Reservas
+      - Amortizaciones
+- Ajenas(Hay que devolverlo)
+  - externas
+    - Préstamo bancario
+      - Caracteristicas:
+        - Capital 100.000€
+        - Tipo de interés 3%
+          - Fijo
+          - Variable: Euríbor + diferencial
+        - Cuota = Intereses + Deducción del capital
