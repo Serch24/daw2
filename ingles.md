@@ -184,13 +184,33 @@ B: ok, where're going to block your account righ now
 
 3. you must take your medicines.
 
-4. i
+4. must
 
 5. im not sure, i think it will.
 
-6. may you answer my phone, please?
+6. may you answer my phone, please? will
 
 7. How long will the fligh take?
 
 8. we should be arriving at 12:10
+
+## conditional clause
+
+#### A
+
+- a.)
+  - **Result**
+
+- b.)
+  - **Cause:** If my parents hadnt spent all etc
+
+- c.)
+  - Result: Because her only other child died as a baby
+
+- d.)
+  - Result:
+
+#### B
+
+1.)
 

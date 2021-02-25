@@ -4,7 +4,7 @@ services:
     ports:
       - 8001:80
     volumes:
-      - ../../controlcillo/pdo/:/var/www/html
+      - ../tema11/primer-ejemplo/:/var/www/html
     links:
       - mysql
   mysql:
