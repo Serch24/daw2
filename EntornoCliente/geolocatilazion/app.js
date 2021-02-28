@@ -1,17 +1,13 @@
 const bt = document.querySelector(".bt");
-const todo = document.querySelector(".todo");
-const todo2 = document.querySelector(".todo2");
+const url = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
 
 bt.addEventListener("click", () => {
         navigator.geolocation.getCurrentPosition(
                 (po) => {
-                        todo.textContent = `Latitud: ${po.coords.latitude}`;
-                        todo2.textContent = `Longitud: ${po.coords.longitude}`;
-                        var mimapa = L.map("mapa", {
-                                center: [51.505, -0.09],
-                                zoom: 13,
-                        });
                         console.log(po);
+                        let latitud = po.coords.latitude;
+                        let longitud = po.coords.longitude;
+                        mostrat(latitud,longitud);
                 },
                 (e) => {
                         todo.textContent = "No se permitió la posición";
@@ -24,3 +20,15 @@ bt.addEventListener("click", () => {
                 }
         );
 });
+const mostrat = (lat,lon) => {
+let mymap = L.map("map").setView(
+                                [lat, lon],
+                                13
+                        );
+                        L.tileLayer(url, {
+                                maxZoom: 18,
+                        }).addTo(mymap);
+
+                        let marcador = L.marker([lat, lon]).addTo(mymap);
+}
+

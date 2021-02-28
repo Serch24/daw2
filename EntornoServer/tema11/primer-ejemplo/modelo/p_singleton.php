@@ -1,5 +1,5 @@
 <?php
-include_once "funciones.php";
+include_once "./controlador/funciones.php";
 class conectaBD
 {
         private $conn = null;
@@ -37,9 +37,16 @@ class conectaBD
 
         public function consulta()
         {
-                $tmp = $this->conn->prepare("select * from brawl");
-                $tmp->execute();
-                return $tmp->fetch(PDO::FETCH_ASSOC);
+                try {
+                        $tmp = $this->conn->prepare("select * from brawl");
+                        if (!$tmp) {
+                                return false;
+                        }
+                        $tmp->execute();
+                        return $tmp->fetch(PDO::FETCH_OBJ);
+                } catch (Exception $e) {
+                        return false;
+                }
         }
 }
 ?>

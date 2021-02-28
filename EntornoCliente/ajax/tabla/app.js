@@ -27,7 +27,7 @@ const nombre2 = document.querySelector("#nombre2");
 fe();*/
 
 //GET
-bt.addEventListener("click", () => {
+/*bt.addEventListener("click", () => {
         let test = new XMLHttpRequest();
         let elobjeto = {
                 nombre: nombre.value,
@@ -52,28 +52,37 @@ bt.addEventListener("click", () => {
                 "application/x-www-form-urlencoded"
         );
         test.send();
-});
+});*/
 
 //POST
-/*bt.addEventListener("click", () => {
-        const miform = new FormData();
+bt.addEventListener("click", () => {
+        /*const miform = new FormData();
         miform.append("nombre", nombre.value);
-        miform.append("apellido", nombre2.value);
+        miform.append("apellido", nombre2.value);*/
+
+        const obje = {
+                nombre: "sergio",
+                apellido: "Yaccelga",
+        };
+        /*console.error(miform)*/
 
         let test = new XMLHttpRequest();
-        test.open("POST", `http://localhost:3033/index.php`, true);
         test.onreadystatechange = () => {
                 if (test.readyState == 4) {
                         if (test.status == 200) {
-                                [>texto.textContent = JSON.parse(
-                                        test.responseText
-                                );<]
-                                console.log(JSON.parse(test.responseText));
+                                /*console.log(JSON.parse(test.responseText));*/
+                                console.log(test.responseText);
                         } else {
                                 console.log("hubo un error");
                         }
                 }
         };
-        [>test.responseType = "json";<]
-        test.send(miform);
-});*/
+
+        test.open("POST", `http://localhost:3033/index.php`, true);
+
+        test.setRequestHeader("Content-Type", "application/json");
+        /*test.setRequestHeader("Content-length", datos.length);*/
+        /*test.setRequestHeader("Connection", "close");*/
+
+        test.send(JSON.stringify(obje));
+});

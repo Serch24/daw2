@@ -1,5 +1,11 @@
 <?php
-$crear_cookie = function ($texto) {
+$empezar = function () {
+        $texto = substr(
+                str_shuffle("0123456789abcdefghijklmnopqerstuvwxyz"),
+                0,
+                5
+        );
+
         $mifo = "./mas.png";
         $im = imagecreatefrompng($mifo);
         for ($i = 0; $i < strlen($texto); $i++) {
@@ -29,10 +35,5 @@ $crear_cookie = function ($texto) {
         header("Content-Disposition:inline; filename=nah.png");
         imagepng($im);
 };
-
-if (isset($_GET["texto"])) {
-        $crear_cookie($_GET["texto"]);
-        setcookie("ready", 1);
-}
-header("location:/");
+$empezar();
 ?>

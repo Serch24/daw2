@@ -1,5 +1,6 @@
 <?php
-if (isset($_GET["valor"])) {
+print_r($_POST);
+/*if (isset($_GET["valor"])) {
         if (strcmp($_GET["valor"], "sergio") === 0) {
                 echo "Hola sergio :)";
         } else {
@@ -10,5 +11,5 @@ if (isset($_GET["test"])) {
         echo $_GET["test"];
 } else {
         echo "falló algo";
-}
+}*/
 ?>
