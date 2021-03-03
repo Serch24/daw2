@@ -4,7 +4,7 @@ services:
     ports:
       - 8001:80
     volumes:
-      - ../tema11/primer-ejemplo/:/var/www/html
+      - ../tema11/crud/:/var/www/html
     links:
       - mysql
   mysql:

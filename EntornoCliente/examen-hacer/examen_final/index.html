@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <meta charset="utf-8" />
+                <meta name="viewport" content="width=device-width" />
+                <title>examen</title>
+        </head>
+        <body>
+                <form action="test.php" method="GET">
+                        <div>
+                                <h1 class="numero_visita">Numero de visita:</h1>
+                                <div class="posicion">
+                                        <p>Usted se encuentra en:</p>
+                                        <p class="lat">Latitud:</p>
+                                        <p class="lon">Longitud:</p>
+                                </div>
+                        </div>
+                        <h1>Operaciones</h1>
+                        <input
+                                type="text"
+                                name="dni"
+                                id="dni"
+                                placeholder="DNI"
+                        />
+                        <input
+                                type="text"
+                                name="nombre"
+                                id="nombre"
+                                placeholder="Nombre"
+                        />
+                        <input
+                                type="date"
+                                name="fecha"
+                                id="fecha"
+                                placeholder="Fecha de nacimiento"
+                        />
+                        <button class="add">Añadir</button>
+                        <button class="delete">Borrar</button>
+                        <button class="search">Consultar</button>
+                        <h1>Mensaje:</h1>
+                </form>
+                <script src="app.js"></script>
+        </body>
+</html>
