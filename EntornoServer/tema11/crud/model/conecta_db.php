@@ -6,7 +6,7 @@ class conectaBD
         private static $instancia;
         private function __construct($database = "test")
         {
-                $dsn = "mysql:host=mysql;dbname=$database;charset=utf8";
+                $dsn = "mysql:host=localhost;dbname=$database;charset=utf8";
                 try {
                         $this->conn = new PDO($dsn, "sergio", "1234", [
                                 PDO::ATTR_PERSISTENT => true,
@@ -150,7 +150,7 @@ class conectaBD
                 if ($tmp->rowCount() === 0) {
                         return ["error" => "No hay datos que mostrar"];
                 } else {
-                        return $tmp->fetchAll(PDO::FETCH_ASSOC);
+                        return $tmp->fetchAll(PDO::FETCH_OBJ);
                 }
         }
 }

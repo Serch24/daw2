@@ -1,22 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
         <meta charset="UTF-8">
-        <title>Modifica</title>
+        <meta name="author" content="Sergio Andŕes Yaccelga Castillo">
+        <meta name="description" content="Ejercicio de CRUD con MVC">
+        <link rel="stylesheet" href="../assets/style.css">
+        <title>CRUD</title>
 </head>
 <body>
+<div class="conta">
 <table>
 <tbody>
-<?php
-/* if (isset($consulta_ver_brawl)) {
-        for ($i = 0; $i < count($consulta_ver_brawl); $i++) {
-                foreach ($consulta_ver_brawl[$i] as $nam => $value) {
-                        echo "<h1>" . $nam . " - " . $value . "</h1>";
-                }
-                echo "<br>";
-        }
-}*/
-?>
         <tr>
                 <th>id</th>
                 <th>Nombre</th>
@@ -26,18 +20,18 @@
 
 <?php if (isset($consulta_ver_brawl)): ?>
         <?php foreach ($consulta_ver_brawl as $datos): ?>
-                <?php foreach ($datos as $valor): ?>
                 <tr>
-                <td><?php echo $valor; ?></td>
-                <td><?php echo $valor; ?></td>
-                <td><?php echo $valor; ?></td>
-                <td><?php echo $valor; ?></td>
+                  <td><?php echo $datos->id; ?></td>
+                  <td><?php echo $datos->nombre; ?></td>
+                  <td><?php echo $datos->num_start_power; ?></td>
+                  <td><?php echo $datos->num_skins; ?></td>
                 </tr>
-                <?php endforeach; ?>
         <?php endforeach; ?>
 <?php endif; ?>
+
 </tbody>
 </table>
+</div>
 
 <?php if (isset($mensaje)) {
         if (isset($mensaje["mensaje"])) {
