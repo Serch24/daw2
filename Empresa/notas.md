@@ -118,3 +118,38 @@ c.) Calcula el resultado si el nivel de producción y ventas fuera de 600 unidad
           - Fijo
           - Variable: Euríbor + diferencial
         - Cuota = Intereses + Deducción del capital
+
+## Ejercicio
+
+- Préstamo= 2000.000€
+- TAE= 4,5% anual
+- Vencimiento= 5años
+- Tabla de amortización del prestamos (Sistema frances)
+
+| años | cuota | interes | Capital amortizado | capital prendiente|
+|------|-------|---------|--------------------|-------------------|
+| hola |adjnbd | fsf     | fsf                |dasd |
+
+## Ejercicio
+
+Una empresa pide a su proveedor 20000 unidades de producto cada año. El coste de almacenar cada unidad es de 2€. La gestión del pedido suponde un coste de 4€. La empresa mantiene como stock de seguridad 40 unidades.El precio de compra de cada producto es de 6€.
+
+a.) Calcula el pedido optimo
+
+b.) Calcula el punto de pedido suponiendo un plazo de aprovisionamiento de 3 días
+
+c.) Calcula el coste total de gestión de inventarios.
+
+## Respuesta
+
+## otro ejercicio
+
+una empresa tiene unos costes fijos de 300.000€ al año.
+Fabricar cada unidad le supone unos costes variables de 40€.
+El precio al que vende cada unidad es de 100€.
+
+a.) calcula el umbral de habi
+
+b.) calcula el resultado si prodijese y vendiese 10.000€ unidades.
+
+c.) lo mismo con 2000€ unidades.

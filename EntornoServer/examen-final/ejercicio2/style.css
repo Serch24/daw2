@@ -1,0 +1,59 @@
+atble,
+th,
+td,
+tbody {
+        border: 1px solid black;
+}
+.conta{
+        width: 100%;
+        height: 40vh;
+        overflow-y: scroll;
+}
+table {
+        border-collapse: collapse;
+        width: 80%;
+        margin: 20px auto;
+}
+td {
+        height: 60px;
+        text-align: center;
+        font-size: 2rem;
+}
+th {
+        font-size: 3rem;
+}
+.campos {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+}
+input[type="text"],
+input[type="number"] {
+        width: 20%;
+}
+.bts {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 10%;
+        justify-content: space-around;
+        margin-bottom: 10px;
+}
+
+.sub {
+        width: 30%;
+        font-size: 3rem;
+        border: none;
+        cursor: pointer;
+        background-color: skyblue;
+        border-radius: 10%;
+}
+.sub:hover {
+        transform: scale(1.1);
+}
+
+p {
+        font-size: 1.6rem;
+        font-weight: bold;
+}

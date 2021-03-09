@@ -1,6 +1,6 @@
 CREATE USER sergio@localhost IDENTIFIED by '1234';
 
-use dwes;
+use examen2eva;
 
 create table brawl (id int not null auto_increment,nombre varchar(10),num_start_power int(2),num_skins int(5), primary key (id));
 

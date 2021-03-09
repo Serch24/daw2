@@ -6,7 +6,7 @@ class conectaBD
         private static $instancia;
         private function __construct($database = "test")
         {
-                $dsn = "mysql:host=localhost;dbname=$database;charset=utf8";
+                $dsn = "mysql:host=mysql;dbname=$database;charset=utf8";
                 try {
                         $this->conn = new PDO($dsn, "sergio", "1234", [
                                 PDO::ATTR_PERSISTENT => true,
@@ -100,7 +100,7 @@ class conectaBD
                         } catch (PDOException $e) {
                                 return [
                                         "error" =>
-                                                "Ocurrió algo" . $e->getLine(),
+                                                "Ocurrió algo en tu consulta",
                                 ];
                         }
                 }
