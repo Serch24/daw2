@@ -17,9 +17,14 @@ class Plato
 
         public function getAlergenos()
         {
-                for ($i = 0; $i < count($this->ingredientes_cantidad); $i++) {
-                        print_r($this->ingredientes_cantidad[$i]);
+                $resultado = [];
+                foreach ($this->ingredientes_cantidad as $v) {
+                        $alr = $v[0]->alergeno;
+                        if ($alr != null) {
+                                $resultado = $alr;
+                        }
                 }
+                return empty($resultado) ? false : $resultado;
         }
 
         public static function precio()
@@ -40,9 +45,5 @@ class Plato
                 <?php
         }
 }
-$a = new Plato("arroz");
-$a->add("nose", 3);
-$a->add("nose", 3);
-$a->getAlergenos();
 
 ?>

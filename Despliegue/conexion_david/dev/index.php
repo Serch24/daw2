@@ -9,10 +9,8 @@
         <form action="./llamar.php" method="GET" >
                crear Base de datos
                 <input type="checkbox" name="creardb" class="creardb" value="creardb">
-               crear tabla
+               insertar dato
                 <input type="checkbox" name="tabla" class="tabla" value="tabla">
-               Insertar dato 
-                <input type="checkbox" name="insertar" class="insertar" value="insertar">
                Actualizar dato
                 <input type="checkbox" name="actualizar" class="actualizar" value="actualizar">
                Eliminar dato
@@ -29,4 +27,4 @@
         <p class="mos_tabla" ></p>
         <script src="./app.js" ></script>
 </body>
-</html >
+</html>

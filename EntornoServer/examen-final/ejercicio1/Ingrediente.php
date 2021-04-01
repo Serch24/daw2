@@ -22,7 +22,27 @@ class Ingrediente
                 $this->nombre = $nombre_;
                 $this->calorias = $calorias_;
                 $this->precio = $precio_;
-                $this->tipo = $tipo_;
+
+                if (is_array($tipo_, range(self::ANIMAL, self::LACTREO))) {
+                        $this->tipo = $tipo_;
+                } else {
+                        $this->tipo = self::SINCALIFICAR;
+                }
+
+                /*if ($tipo_) {
+                        if (
+                                $tipo_ == self::ANIMAL ||
+                                $tipo_ == self::VEGETAL ||
+                                $tipo_ == self::LACTREO
+                        ) {
+                                $this->tipo = $tipo_;
+                        } else {
+                                $this->tipo = self::SINCALIFICAR;
+                        }
+                } else {
+                        $this->tipo = self::SINCALIFICAR;
+                }*/
+
                 $this->alergeno = $alergeno_;
         }
 

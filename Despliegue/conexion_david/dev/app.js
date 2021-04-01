@@ -1,5 +1,4 @@
 const bt = document.querySelector(".bt");
-const direccion = `192.168.98.66:9090`;
 const dbname = document.querySelector(".dbname");
 const mos_tabla = document.querySelector(".mos_tabla");
 const query = document.querySelector("#query");
@@ -9,7 +8,6 @@ const ck2 = document.querySelector(".tabla");
 const ck3 = document.querySelector(".actualizar");
 const ck4 = document.querySelector(".eliminar");
 const ck5 = document.querySelector(".ver");
-const ck6 = document.querySelector(".insertar");
 const nombre_db = document.querySelector(".nombre_db");
 
 nombre_db.style.display = "none";
@@ -56,16 +54,6 @@ ck4.addEventListener("click", (e) => {
 });
 
 ck5.addEventListener("click", (e) => {
-        if (e.target.checked === true) {
-                query.style.display = "block";
-                nombre_db.style.display = "block";
-        } else {
-                query.style.display = "none";
-                nombre_db.style.display = "none";
-        }
-});
-
-ck6.addEventListener("click", (e) => {
         if (e.target.checked === true) {
                 query.style.display = "block";
                 nombre_db.style.display = "block";
@@ -125,27 +113,16 @@ bt.addEventListener("click", (e) => {
                         };
                         consulta5(JSON.stringify(obj));
                 }
-
-                if (ck6.checked === true) {
-                        let obj = {
-                                dato: "Insertar",
-                                info: {
-                                        query: query.value,
-                                        nombredb: nombre_db.value,
-                                },
-                        };
-                        consulta6(JSON.stringify(obj));
-                }
         } else {
                 ok.textContent = `Hay campos en blanco`;
         }
 });
 
 const consulta = async ({ dato, info }) => {
-        const url = `http://${direccion}/conexion_david/llamar.php?enviar=1&${dato}=${info}`;
+        const url = `http://localhost:8001/llamar.php?enviar=1&${dato}=${info}`;
         try {
                 const fet = await fetch(url);
-                const res = await fet.json();
+                const res = await fet.text();
                 console.log(res);
                 ok.textContent = res.mensaje;
                 setTimeout(() => {
@@ -157,7 +134,7 @@ const consulta = async ({ dato, info }) => {
 };
 
 const consulta2 = async (datos) => {
-        const url = `http://${direccion}/conexion_david/llamar.php?enviar=1&x=${datos}`;
+        const url = `http://localhost:8001/llamar.php?enviar=1&x=${datos}`;
         try {
                 const fet = await fetch(url);
                 const res = await fet.json();
@@ -172,7 +149,7 @@ const consulta2 = async (datos) => {
 };
 
 const consulta3 = async (datos) => {
-        const url = `http://${direccion}/conexion_david/llamar.php?enviar=1&actualizar=${datos}`;
+        const url = `http://localhost:8001/llamar.php?enviar=1&actualizar=${datos}`;
         try {
                 const fet = await fetch(url);
                 const res = await fet.json();
@@ -187,7 +164,7 @@ const consulta3 = async (datos) => {
 };
 
 const consulta4 = async (datos) => {
-        const url = `http://${direccion}/conexion_david/llamar.php?enviar=1&eliminar=${datos}`;
+        const url = `http://localhost:8001/llamar.php?enviar=1&eliminar=${datos}`;
         try {
                 const fet = await fetch(url);
                 const res = await fet.json();
@@ -202,22 +179,7 @@ const consulta4 = async (datos) => {
 };
 
 const consulta5 = async (datos) => {
-        const url = `http://${direccion}/conexion_david/llamar.php?enviar=1&ver=${datos}`;
-        try {
-                const fet = await fetch(url);
-                const res = await fet.json();
-                console.log(res);
-                /*crearTabla(res);*/
-                setTimeout(() => {
-                        ok.textContent = "";
-                }, 3000);
-        } catch (e) {
-                console.log("Algo pasó", e);
-        }
-};
-
-const consulta6 = async (datos) => {
-        const url = `http://${direccion}/conexion_david/llamar.php?enviar=1&insertar=${datos}`;
+        const url = `http://localhost:8001/llamar.php?enviar=1&ver=${datos}`;
         try {
                 const fet = await fetch(url);
                 const res = await fet.json();

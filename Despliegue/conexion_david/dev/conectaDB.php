@@ -6,9 +6,10 @@ class conectaBD
         private static $instancia;
         private function __construct()
         {
-                $dsn = "mysql:host=localhost;charset=utf8";
+                /*$dsn = "mysql:host=192.168.98.90;charset=utf8";*/
+                $dsn = "mysql:host=mysql;charset=utf8";
                 try {
-                        $this->conn = new PDO($dsn, "sergio", "Nohay2sin3", [
+                        $this->conn = new PDO($dsn, "root", "1234", [
                                 PDO::ATTR_PERSISTENT => true,
                         ]);
                 } catch (PDOException $e) {
@@ -142,9 +143,7 @@ class conectaBD
                         }
                 } catch (PDOException $e) {
                         return json_encode([
-                                "mensaje" =>
-                                        "Error en la consulta" .
-                                        $e->getMessage(),
+                                "mensaje" => "Error en la consulta",
                         ]);
                 }
         }

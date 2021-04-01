@@ -153,3 +153,39 @@ a.) calcula el umbral de habi
 b.) calcula el resultado si prodijese y vendiese 10.000€ unidades.
 
 c.) lo mismo con 2000€ unidades.
+
+## Temas de examen
+
+TEMA 5: FORMAS JURÍDICAS(Libro tema 6)
+-----------------------------
+
+-Empresario
+-Sociedad limitada {SLFS,SLNG} LIBRO
+-S.A ->CORREO
+-SOCIEDAD LABORAL ->CORREO
+-SOCIEDAD COOPERATIVA ->CORREO
+-TRÁMITES CONSTITUCIÓN ->FOTOCOPIAS
+-TRÁMITES PUESTA EN MARCHA ->FOTOCOPIAS
+
+TEMA 6: PLAN DE PRODUCCIÓN(Libro tema 7)
+-----------------------------
+
+-PLAN DE PRODUCCIÓN
+-Aprovisionamiento
+Compras
+Almacenamiento
+-Gestión Inventario pedido óptimo->Fotocopias
+-Costes fijos y variables
+
+### aaa
+
+D = 20,000 / 365
+g = 2€
+s = 4€
+ss = 40€
+p = 6€
+PA = 3
+
+pedido optimo = 110€
+punto de pedido = 85€
+CTI = 6x55 + (55/100)x4 + 2(40+(100/2))

@@ -5,16 +5,13 @@ if (isset($_GET["enviar"])) {
         if (isset($_GET["x"])) {
                 $tmp = json_decode($_GET["x"]);
                 /*print_r($tmp);*/
-                echo $nuevo->crear_tabla($tmp);
+                /*echo $tmp->info->query;
+                 echo $tmp->info->nombredb;*/
+                echo $nuevo->insertar($tmp);
         }
 
         if (isset($_GET["creardb"])) {
                 echo $nuevo->creardb($_GET["creardb"]);
-        }
-
-        if (isset($_GET["insertar"])) {
-                $tmp = json_decode($_GET["insertar"]);
-                echo $nuevo->insertar($tmp);
         }
 
         if (isset($_GET["actualizar"])) {
